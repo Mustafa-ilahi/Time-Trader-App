@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {styles} from './style';
 import {SafeAreaView, View, Text, TouchableOpacity, Alert} from 'react-native';
-// import CrossBtn from '../../components/CrossBtn';
 import {
   CodeField,
   Cursor,
@@ -86,11 +85,10 @@ export default function OTP({navigation}) {
             </Text>
           )}
         </View>
-       
       </View>
       <View style={styles.btnBottom}>
-          <Button />
-        </View>
+        <Button title={'Verify'} dark={true}/>
+      </View>
     </SafeAreaView>
   );
 }
