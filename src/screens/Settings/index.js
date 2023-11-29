@@ -6,7 +6,7 @@ import {styles} from './style';
 
 export default function Settings() {
   return (
-    <View>
+    <View style={styles.mainView}>
       <Header />
       <TouchableOpacity>
         <Image source={images.threeDot} style={styles.headerImg} />

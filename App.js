@@ -6,6 +6,10 @@ import Notification from './src/screens/Notification';
 import Settings from './src/screens/Settings';
 import EditMyProfile from './src/screens/EditMyProfile';
 import SettingNotification from './src/screens/SettingNotification';
+import Earning from './src/screens/Earning';
+import EarningSecondScreen from './src/screens/EarningSecondScreen';
+import Privacy from './src/screens/Privacy';
+import Payment from './src/screens/Payment';
 
 export default function App() {
   return (
@@ -15,7 +19,11 @@ export default function App() {
       {/* <Notification /> */}
       {/* <Settings /> */}
       {/* <EditMyProfile /> */}
-      <SettingNotification />
+      {/* <SettingNotification /> */}
+      {/* <Earning /> */}
+      {/* <EarningSecondScreen /> */}
+      {/* <Privacy /> */}
+      <Payment />
     </View>
   );
 }

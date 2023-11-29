@@ -6,7 +6,7 @@ import images from '../../services/utilities/images';
 
 export default function EditMyProfile() {
   return (
-    <View>
+    <View style={styles.mainView}>
       <View style={styles.headerPadding}>
         <Header title={'Edit my Profile'} />
       </View>

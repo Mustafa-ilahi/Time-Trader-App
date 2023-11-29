@@ -14,6 +14,12 @@ import downArrow from '../../../assets/downArrow.png';
 import calender from '../../../assets/calender.png';
 import flag from '../../../assets/flag.png';
 import location from '../../../assets/location.png';
+import graphOne from '../../../assets/graphOne.png';
+import graphTwo from '../../../assets/graphTwo.png';
+import graphThree from '../../../assets/graphThree.png';
+import cardone from '../../../assets/cardone.png';
+import cardtwo from '../../../assets/cardtwo.png';
+import cardthree from '../../../assets/cardthree.png';
 const images = {
   add,
   backIcon,
@@ -30,7 +36,13 @@ const images = {
   downArrow,
   calender,
   flag,
-  location
+  location,
+  graphOne,
+  graphTwo,
+  graphThree,
+  cardone,
+  cardtwo,
+  cardthree,
 };
 
 export default images;

@@ -2,7 +2,12 @@ import { StyleSheet } from "react-native";
 import { colors, fontSize, sizes } from "../../services";
 
 export const styles = StyleSheet.create({
-    headerPadding:{
+    mainView:{
+        backgroundColor:colors.white,
+        height:sizes.screenHeight,
+        width:sizes.screenWidth,
+    },
+        headerPadding:{
         marginLeft:sizes.screenWidth * 0.03,
         marginTop:sizes.screenWidth * 0.03,
         marginBottom:sizes.screenWidth * 0.03

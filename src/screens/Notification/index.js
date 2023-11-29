@@ -7,7 +7,7 @@ import { sizes } from '../../services';
 
 export default function Notification() {
   return (
-    <View>
+    <View style={styles.mainView}> 
       <Header title={'Notifications'} />
       <TouchableOpacity>
         <Image source={images.notiHeader} style={styles.headerImg} />
