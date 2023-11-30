@@ -24,6 +24,16 @@ import cardtwo from '../../../assets/cardtwo.png';
 import cardthree from '../../../assets/cardthree.png';
 import clickOpen from '../../../assets/clickOpen.png';
 import clickOff from '../../../assets/clickOff.png';
+import pencil from '../../../assets/pencil.png';
+import numberOne from '../../../assets/numberOne.png';
+import imgOne from '../../../assets/imgOne.png';
+import numberTwo from '../../../assets/numberTwo.png';
+import imgTwo from '../../../assets/imgTwo.png';
+import numberThree from '../../../assets/numberThree.png';
+import imgThree from '../../../assets/imgThree.png';
+import numberFour from '../../../assets/numberFour.png';
+import imgFour from '../../../assets/imgFour.png';
+import banner from '../../../assets/banner.png';
 const images = {
   add,
   backIcon,
@@ -51,6 +61,16 @@ const images = {
   cardthree,
   clickOpen,
   clickOff,
+  pencil,
+  numberOne,
+  numberTwo,
+  numberThree,
+  numberFour,
+  imgOne,
+  imgTwo,
+  imgThree,
+  imgFour,
+  banner,
 };
 
 export default images;
