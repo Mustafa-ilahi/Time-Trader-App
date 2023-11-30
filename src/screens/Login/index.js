@@ -14,25 +14,25 @@ import {colors} from '../../services';
 import images from '../../services/utilities/images';
 import Button from '../../components/Button';
 
-export default function CreateAccount() {
+export default function Login() {
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <Header />
+        <Image source={images.loginBg} style={styles.loginBg}/>
         <View style={styles.contentView}>
-          <Text style={styles.heading}>Create your Account</Text>
-          <View style={styles.row}>
-            <Image source={images.mobile} style={styles.mobileImg} />
-            <TextInput
-              placeholder="Mobile"
-              placeholderTextColor={'#8189B0'}
-              style={styles.input}
-              keyboardType="numeric"
-            />
+          <Text style={styles.heading}>Let’s get you in</Text>
+          <Text style={styles.loginViaText}>Login via</Text>
+
+          <View style={styles.marginTop}>
           </View>
         </View>
         <View style={styles.bottom}>
-          <Button title={'Sign Up'} dark={true} />
+          <View>
+            <TouchableOpacity style={[styles.button, styles.row]}>
+              <Image source={images.mobile} style={styles.img} />
+              <Text style={styles.buttonTxt}>Mobile</Text>
+            </TouchableOpacity>
+          </View>
           <Text style={styles.orText}>Or</Text>
           <Button
             title={'Login with Apple'}
@@ -49,13 +49,13 @@ export default function CreateAccount() {
           </View>
         </View>
         <View style={styles.bottomTextContainer}>
-            <Text style={styles.textNormal}>Don't have an account? </Text>
-            <TouchableOpacity 
-            // onPress={()=>{navigation.navigate('SignUp')}}
-            >
-              <Text style={styles.textTouchable}>Sign In</Text>
-            </TouchableOpacity>
-          </View>
+          <Text style={styles.textNormal}>Don't have an account? </Text>
+          <TouchableOpacity
+          // onPress={()=>{navigation.navigate('SignUp')}}
+          >
+            <Text style={styles.textTouchable}>Sign Up</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </SafeAreaView>
   );

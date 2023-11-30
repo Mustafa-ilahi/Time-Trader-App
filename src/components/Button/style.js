@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: fontSize.h6,
   },
-  buttonLight:{
+  buttonLight: {
     backgroundColor: colors.white,
     padding: sizes.screenHeight * 0.022,
     width: sizes.screenWidth * 0.9,
@@ -30,9 +30,25 @@ export const styles = StyleSheet.create({
 
     elevation: 5,
   },
-  buttonTxtLight:{
+  buttonTxtLight: {
     color: colors.black,
     textAlign: 'center',
     fontSize: fontSize.h6,
+  },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent:'space-between',
+    paddingRight:sizes.screenWidth*0.25,
+  },
+  img:{
+    height:sizes.screenHeight*0.04,
+    width:sizes.screenHeight*0.032,
+    left:sizes.screenWidth*0.1
+  },
+  googleImg:{
+    height:sizes.screenHeight*0.04,
+    width:sizes.screenHeight*0.039,
+    left:sizes.screenWidth*0.1
   }
 });
