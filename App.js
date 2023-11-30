@@ -13,23 +13,15 @@ import Privacy from './src/screens/Privacy';
 import Payment from './src/screens/Payment';
 import Language from './src/screens/Language';
 import Profile from './src/screens/Profile';
+import MainBalance from './src/screens/MainBalance';
+import TransactionHistory from './src/screens/TransactionHistory';
+import TopUpWallet from './src/screens/TopUpWallet';
+import WithdrawToBankAccount from './src/screens/WithdrawToBankAccount';
+import Cards from './src/screens/Cards';
+import AddNewCard from './src/screens/AddNewCard';
+import CardDetails from './src/screens/CardDetails';
+import MainNavigator from './src/services/config/navigation';
 
 export default function App() {
-  return (
-    <View>
-      {/* <OTP /> */}
-      {/* <CreateAccount /> */}
-      {/* <Notification /> */}
-      {/* <Settings /> */}
-      {/* <EditMyProfile /> */}
-      {/* <SettingNotification /> */}
-      {/* <Security /> */}
-      {/* <Earning /> */}
-      {/* <EarningSecondScreen /> */}
-      {/* <Privacy /> */}
-      {/* <Payment /> */}
-      {/* <Language /> */}
-      <Profile />
-    </View>
-  );
+  return <MainNavigator />;
 }
