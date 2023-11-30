@@ -6,16 +6,18 @@ import Notification from './src/screens/Notification';
 import Settings from './src/screens/Settings';
 import EditMyProfile from './src/screens/EditMyProfile';
 import SettingNotification from './src/screens/SettingNotification';
+import Security from './src/screens/Security';
 
 export default function App() {
   return (
     <View>
       {/* <OTP /> */}
       {/* <CreateAccount /> */}
-      {/* <Notification /> */}
+      <Notification />
       {/* <Settings /> */}
       {/* <EditMyProfile /> */}
-      <SettingNotification />
+      {/* <SettingNotification /> */}
+      {/* <Security /> */}
     </View>
   );
 }

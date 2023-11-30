@@ -1,4 +1,4 @@
-import {View, Text, TouchableOpacity, Image} from 'react-native';
+import {View, Text, TouchableOpacity, Image, SafeAreaView} from 'react-native';
 import React from 'react';
 import Header from '../../components/Header';
 import images from '../../services/utilities/images';
@@ -6,7 +6,8 @@ import {styles} from './style';
 
 export default function Settings() {
   return (
-    <View>
+    <SafeAreaView>
+    <View style={styles.MainContainer}>
       <Header />
       <TouchableOpacity>
         <Image source={images.threeDot} style={styles.headerImg} />
@@ -47,5 +48,6 @@ export default function Settings() {
         </TouchableOpacity>
       </View>
     </View>
+    </SafeAreaView>
   );
 }

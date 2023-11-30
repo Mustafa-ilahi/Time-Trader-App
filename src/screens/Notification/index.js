@@ -1,4 +1,4 @@
-import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {View, Text, Image, TouchableOpacity, SafeAreaView} from 'react-native';
 import React from 'react';
 import {styles} from './style';
 import Header from '../../components/Header';
@@ -7,7 +7,8 @@ import { sizes } from '../../services';
 
 export default function Notification() {
   return (
-    <View>
+    <SafeAreaView>
+    <View style={styles.MainContainer}>
       <Header title={'Notifications'} />
       <TouchableOpacity>
         <Image source={images.notiHeader} style={styles.headerImg} />
@@ -74,5 +75,6 @@ export default function Notification() {
         </TouchableOpacity>
       </View>
     </View>
+    </SafeAreaView>
   );
 }

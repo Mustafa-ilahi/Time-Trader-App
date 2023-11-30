@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {colors, sizes} from '../../services';
+import {colors, fontSize, sizes} from '../../services';
 
 export const styles = StyleSheet.create({
   MainContainer:{
@@ -17,7 +17,6 @@ export const styles = StyleSheet.create({
   listViewSty: {
     height: sizes.screenHeight * 0.07,
     width: sizes.screenWidth * 0.82,
-    // alignItems:'center',
     borderRadius: sizes.screenWidth * 0.01,
     shadowColor: '#000',
     shadowOffset: {
@@ -36,7 +35,6 @@ export const styles = StyleSheet.create({
   listTextSty: {
     color: colors.black,
     paddingLeft: sizes.screenWidth * 0.05,
-    // backgroundColor:'red'
   },
   radioImgView:{
     marginRight:sizes.screenWidth * 0.03
@@ -45,5 +43,18 @@ export const styles = StyleSheet.create({
     resizeMode: 'center',
     width: sizes.screenWidth * 0.11,
     height: sizes.screenWidth * 0.05,
+    marginRight:sizes.screenWidth * 0.02
+  },
+  bottomBtn:{
+    borderWidth:1,
+    height: sizes.screenHeight * 0.07,
+    width: sizes.screenWidth * 0.82,
+    borderRadius: sizes.screenWidth * 0.3,
+    textAlign:'center',
+    textAlignVertical:'center',
+    marginTop:sizes.screenHeight * 0.06,
+    backgroundColor:colors.black,
+    color:colors.white,
+    fontSize:fontSize.large
   },
 });

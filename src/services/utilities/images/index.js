@@ -14,6 +14,8 @@ import downArrow from '../../../assets/downArrow.png';
 import calender from '../../../assets/calender.png';
 import flag from '../../../assets/flag.png';
 import location from '../../../assets/location.png';
+import radiobtnOpen from '../../../assets/radiobtnOpen.png';
+import radiobtnOff from '../../../assets/radiobtnOff.png';
 const images = {
   add,
   backIcon,
@@ -30,7 +32,9 @@ const images = {
   downArrow,
   calender,
   flag,
-  location
+  location,
+  radiobtnOpen,
+  radiobtnOff,
 };
 
 export default images;

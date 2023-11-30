@@ -1,4 +1,4 @@
-import {View, Text, Image, Touchable, TouchableOpacity} from 'react-native';
+import {View, Text, Image, Touchable, TouchableOpacity, SafeAreaView} from 'react-native';
 import React from 'react';
 import {styles} from './style';
 import Header from '../../components/Header';
@@ -6,7 +6,8 @@ import images from '../../services/utilities/images';
 
 export default function EditMyProfile() {
   return (
-    <View>
+    <SafeAreaView>
+    <View style={styles.MainContainer}>
       <View style={styles.headerPadding}>
         <Header title={'Edit my Profile'} />
       </View>
@@ -45,5 +46,6 @@ export default function EditMyProfile() {
         </TouchableOpacity>
       </View>
     </View>
+    </SafeAreaView>
   );
 }
