@@ -67,7 +67,15 @@ import btmTaB2 from '../../../assets/btmTaB2.png';
 import btmTaB3 from '../../../assets/btmTaB3.png';
 import btmTaB4 from '../../../assets/btmTaB4.png';
 import btmTaB5 from '../../../assets/btmTaB5.png';
-
+import profile2 from '../../../assets/profile2.png';
+import trackImg from '../../../assets/trackImg.png';
+import message1 from '../../../assets/message1.png';
+import message2 from '../../../assets/message2.png';
+import message3 from '../../../assets/message3.png';
+import message4 from '../../../assets/message4.png';
+import message5 from '../../../assets/message5.png';
+import message6 from '../../../assets/message6.png';
+import message7 from '../../../assets/message7.png';
 
 const images = {
   add,
@@ -141,7 +149,15 @@ const images = {
   btmTaB3,
   btmTaB4,
   btmTaB5,
-
+  profile2,
+  trackImg,
+  message1,
+  message2,
+  message3,
+  message4,
+  message5,
+  message6,
+  message7,
 };
 
 export default images;

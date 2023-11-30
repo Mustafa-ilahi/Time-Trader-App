@@ -3,8 +3,11 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {sizes} from '../utilities/sizes';
 import {colors} from '../utilities/colors';
 import images from '../utilities/images';
-import {Image, View} from 'react-native';
+import {Image, Text, View} from 'react-native';
 import CardDetails from '../../screens/CardDetails';
+import {fontSize} from '../utilities/fonts';
+import Booking from '../../screens/Booking';
+import Inbox from '../../screens/Inbox';
 
 const Tab = createBottomTabNavigator();
 
@@ -13,131 +16,131 @@ export default function TabNavigation() {
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
-        // tabBarShowLabel: false,
         tabBarStyle: {
-          backgroundColor: 'red',
+          backgroundColor: colors.white,
           width: sizes.screenWidth,
-          height: sizes.screenHeight * 0.08,
-          paddingBottom: 10,
+          height: sizes.screenHeight * 0.075,
+          paddingTop: sizes.screenHeight * 0.01,
+          paddingHorizontal: sizes.screenWidth * 0.04,
+          borderTopWidth: 0,
         },
       }}>
       <Tab.Screen
-        name="CardDetails"
+        name="bottom1"
         component={CardDetails}
         options={{
-          tabBarIcon: ({focused}) =>
-            focused ? (
-              <Image
-                source={images.btmTaB1}
-                style={{
-                  resizeMode: 'contain',
-
-                  width: sizes.screenWidth * 0.07,
-                  height: sizes.screenWidth * 0.07,
-                  tintColor: '#FFFFFF',
-                }}
-              />
-            ) : (
-              <Image
-                source={images.btmTaB1}
-                style={{
-                  resizeMode: 'contain',
-
-                  width: sizes.screenWidth * 0.07,
-                  height: sizes.screenWidth * 0.07,
-                  tintColor: '#505050',
-                }}
-              />
-            ),
+          tabBarIcon: ({focused}) => (
+            <Image
+              source={images.btmTaB1}
+              style={{
+                resizeMode: 'contain',
+                width: sizes.screenWidth * 0.065,
+                height: sizes.screenWidth * 0.065,
+                tintColor: focused ? colors.black : colors.disabledBg,
+              }}
+            />
+          ),
+          tabBarLabel: ({focused}) => (
+            <CustomTabLabel focused={focused} label="Home" />
+          ),
         }}
       />
-      {/* <Tab.Screen name='Home2' component={Home} options={{
-                tabBarIcon: ({ focused }) =>
-                    focused ? (
-                        <Image
-                            source={images.btmTaB2}
-                            style={{
-                                resizeMode: 'contain',
-                                width: sizes.screenWidth * 0.06,
-                                height: sizes.screenWidth * 0.07,
-
-
-                            }}
-                        />
-                    ) : (
-                        <Image
-                            source={images.btmTaB2}
-                            style={{
-                                resizeMode: 'contain',
-                                width: sizes.screenWidth * 0.06,
-                                height: sizes.screenWidth * 0.07,
-                                tintColor: '#505050'
-                            }}
-                        />
-                    )
-            }} />
-      <Tab.Screen name='Home3' component={Home} options={{
-                tabBarIcon: ({ focused }) =>
-                    focused ? (
-                        <Image
-                            source={images.btmTaB3}
-                            style={{
-                                resizeMode: 'contain',
-                                width: sizes.screenWidth * 0.06,
-                                height: sizes.screenWidth * 0.07,
-
-                            }}
-                        />
-                    ) : (
-                        <Image
-                            source={images.btmTaB3}
-                            style={{
-                                resizeMode: 'contain',
-                                width: sizes.screenWidth * 0.06,
-                                height: sizes.screenWidth * 0.07,
-                                tintColor: '#505050'
-                            }}
-                        />
-                    )
-            }} />
-      <Tab.Screen name='Home4' component={Home} options={{
-                tabBarIcon: ({ focused }) =>
-                    focused ? (
-                        <View style={{
-                            borderColor: '#DDE9FE',
-                            borderWidth: 2,
-                            borderRadius: sizes.screenWidth * 0.07,
-                            padding: sizes.screenWidth * 0.01,
-                        }}>
-                            <Image
-                                source={images.btmTaB4}
-                                style={{
-                                    resizeMode: 'contain',
-
-                                    width: sizes.screenWidth * 0.075,
-                                    height: sizes.screenWidth * 0.075,
-                                }}
-                            />
-                        </View>
-                    ) : (
-                        <View style={{
-                            borderColor: '#505050',
-                            borderWidth: 2,
-                            resizeMode: 'contain',
-
-                            borderRadius: sizes.screenWidth * 0.07,
-                            padding: sizes.screenWidth * 0.01,
-                        }}>
-                            <Image
-                                source={images.btmTaB4}
-                                style={{
-                                    width: sizes.screenWidth * 0.075,
-                                    height: sizes.screenWidth * 0.075,
-                                }}
-                            />
-                        </View>
-                    )
-            }} /> */}
+      <Tab.Screen
+        name="Booking"
+        component={Booking}
+        options={{
+          tabBarIcon: ({focused}) => (
+            <Image
+              source={images.btmTaB5}
+              style={{
+                resizeMode: 'contain',
+                width: sizes.screenWidth * 0.065,
+                height: sizes.screenWidth * 0.065,
+                tintColor: focused ? colors.black : colors.disabledBg,
+              }}
+            />
+          ),
+          tabBarLabel: ({focused}) => (
+            <CustomTabLabel focused={focused} label="Bookings" />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Inbox"
+        component={Inbox}
+        options={{
+          tabBarIcon: ({focused}) => (
+            <Image
+              source={images.btmTaB4}
+              style={{
+                resizeMode: 'contain',
+                width: sizes.screenWidth * 0.065,
+                height: sizes.screenWidth * 0.065,
+                tintColor: focused ? colors.black : colors.disabledBg,
+              }}
+            />
+          ),
+          tabBarLabel: ({focused}) => (
+            <CustomTabLabel focused={focused} label="Inbox" />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="bottom4"
+        component={CardDetails}
+        options={{
+          tabBarIcon: ({focused}) => (
+            <Image
+              source={images.btmTaB3}
+              style={{
+                resizeMode: 'contain',
+                width: sizes.screenWidth * 0.065,
+                height: sizes.screenWidth * 0.065,
+                tintColor: focused ? colors.black : colors.disabledBg,
+              }}
+            />
+          ),
+          tabBarLabel: ({focused}) => (
+            <CustomTabLabel focused={focused} label="Wallet" />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="bottom5"
+        component={CardDetails}
+        options={{
+          tabBarIcon: ({focused}) => (
+            <Image
+              source={images.btmTaB2}
+              style={{
+                resizeMode: 'contain',
+                width: sizes.screenWidth * 0.065,
+                height: sizes.screenWidth * 0.065,
+                tintColor: focused ? colors.black : colors.disabledBg,
+              }}
+            />
+          ),
+          tabBarLabel: ({focused}) => (
+            <CustomTabLabel focused={focused} label="Profile" />
+          ),
+        }}
+      />
     </Tab.Navigator>
   );
 }
+
+const CustomTabLabel = ({focused, label}) => {
+  const inactiveColor = colors.disabledBg2;
+  const activeColor = colors.black;
+
+  return (
+    <Text
+      style={{
+        color: focused ? activeColor : inactiveColor,
+        fontSize: fontSize.smallM,
+        fontWeight: focused ? '800' : '400',
+      }}>
+      {label}
+    </Text>
+  );
+};
