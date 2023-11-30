@@ -22,6 +22,8 @@ import graphThree from '../../../assets/graphThree.png';
 import cardone from '../../../assets/cardone.png';
 import cardtwo from '../../../assets/cardtwo.png';
 import cardthree from '../../../assets/cardthree.png';
+import clickOpen from '../../../assets/clickOpen.png';
+import clickOff from '../../../assets/clickOff.png';
 const images = {
   add,
   backIcon,
@@ -47,6 +49,8 @@ const images = {
   cardone,
   cardtwo,
   cardthree,
+  clickOpen,
+  clickOff,
 };
 
 export default images;

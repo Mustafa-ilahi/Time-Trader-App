@@ -11,6 +11,7 @@ import Earning from './src/screens/Earning';
 import EarningSecondScreen from './src/screens/EarningSecondScreen';
 import Privacy from './src/screens/Privacy';
 import Payment from './src/screens/Payment';
+import Language from './src/screens/Language';
 
 export default function App() {
   return (
@@ -21,11 +22,12 @@ export default function App() {
       {/* <Settings /> */}
       {/* <EditMyProfile /> */}
       {/* <SettingNotification /> */}
-      <Security />
+      {/* <Security /> */}
       {/* <Earning /> */}
       {/* <EarningSecondScreen /> */}
       {/* <Privacy /> */}
       {/* <Payment /> */}
+      <Language />
     </View>
   );
 }
