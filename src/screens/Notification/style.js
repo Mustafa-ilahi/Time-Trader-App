@@ -2,11 +2,17 @@ import { StyleSheet } from "react-native";
 import { colors, fontSize, sizes } from "../../services";
 
 export const styles = StyleSheet.create({
+
     MainContainer:{
         backgroundColor:colors.white,
         height: sizes.screenHeight,
         width: sizes.screenWidth,
       },
+    mainView:{
+        backgroundColor:colors.white,
+        height:sizes.screenHeight,
+        width:sizes.screenWidth,
+    },
     headerImg:{
         position:'absolute',
         right:23,

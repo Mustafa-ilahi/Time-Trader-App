@@ -7,8 +7,10 @@ import { sizes } from '../../services';
 
 export default function Notification() {
   return (
+
     <SafeAreaView>
     <View style={styles.MainContainer}>
+    <View style={styles.mainView}> 
       <Header title={'Notifications'} />
       <TouchableOpacity>
         <Image source={images.notiHeader} style={styles.headerImg} />
@@ -74,6 +76,7 @@ export default function Notification() {
           </View>
         </TouchableOpacity>
       </View>
+    </View>
     </View>
     </SafeAreaView>
   );

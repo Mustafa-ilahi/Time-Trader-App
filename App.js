@@ -7,17 +7,25 @@ import Settings from './src/screens/Settings';
 import EditMyProfile from './src/screens/EditMyProfile';
 import SettingNotification from './src/screens/SettingNotification';
 import Security from './src/screens/Security';
+import Earning from './src/screens/Earning';
+import EarningSecondScreen from './src/screens/EarningSecondScreen';
+import Privacy from './src/screens/Privacy';
+import Payment from './src/screens/Payment';
 
 export default function App() {
   return (
     <View>
       {/* <OTP /> */}
       {/* <CreateAccount /> */}
-      <Notification />
+      {/* <Notification /> */}
       {/* <Settings /> */}
       {/* <EditMyProfile /> */}
       {/* <SettingNotification /> */}
-      {/* <Security /> */}
+      <Security />
+      {/* <Earning /> */}
+      {/* <EarningSecondScreen /> */}
+      {/* <Privacy /> */}
+      {/* <Payment /> */}
     </View>
   );
 }

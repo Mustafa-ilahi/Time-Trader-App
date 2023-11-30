@@ -16,6 +16,12 @@ import flag from '../../../assets/flag.png';
 import location from '../../../assets/location.png';
 import radiobtnOpen from '../../../assets/radiobtnOpen.png';
 import radiobtnOff from '../../../assets/radiobtnOff.png';
+import graphOne from '../../../assets/graphOne.png';
+import graphTwo from '../../../assets/graphTwo.png';
+import graphThree from '../../../assets/graphThree.png';
+import cardone from '../../../assets/cardone.png';
+import cardtwo from '../../../assets/cardtwo.png';
+import cardthree from '../../../assets/cardthree.png';
 const images = {
   add,
   backIcon,
@@ -35,6 +41,12 @@ const images = {
   location,
   radiobtnOpen,
   radiobtnOff,
+  graphOne,
+  graphTwo,
+  graphThree,
+  cardone,
+  cardtwo,
+  cardthree,
 };
 
 export default images;

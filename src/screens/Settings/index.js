@@ -8,6 +8,7 @@ export default function Settings() {
   return (
     <SafeAreaView>
     <View style={styles.MainContainer}>
+    <View style={styles.mainView}>
       <Header />
       <TouchableOpacity>
         <Image source={images.threeDot} style={styles.headerImg} />
@@ -47,6 +48,7 @@ export default function Settings() {
           <Text style={styles.listViewText2}>Logout</Text>
         </TouchableOpacity>
       </View>
+    </View>
     </View>
     </SafeAreaView>
   );

@@ -7,6 +7,11 @@ export const styles = StyleSheet.create({
         height: sizes.screenHeight,
         width: sizes.screenWidth,
       },    
+    mainView:{
+        backgroundColor:colors.white,
+        height:sizes.screenHeight,
+        width:sizes.screenWidth,
+    },    
     headerImg:{
         position:'absolute',
         right:23,

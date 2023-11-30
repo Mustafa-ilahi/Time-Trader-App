@@ -38,6 +38,7 @@ export const colors = {
     grayBg2:'#E3E3E3',
     red:'#ee1c2f',
     line:'#919191',
-    toggleRed:'#bf121b'
+    toggleRed:'#bf121b',
+    btngrey:'#DDDDDD'
   };
   
