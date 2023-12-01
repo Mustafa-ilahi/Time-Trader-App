@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
     fontWeight: '700',
   },
   img: {
-    height: sizes.screenWidth * 0.06,
-    width: sizes.screenWidth * 0.06,
+    height: sizes.screenWidth * 0.05,
+    width: sizes.screenWidth * 0.05,
   },
 });

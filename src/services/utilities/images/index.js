@@ -76,6 +76,7 @@ import message4 from '../../../assets/message4.png';
 import message5 from '../../../assets/message5.png';
 import message6 from '../../../assets/message6.png';
 import message7 from '../../../assets/message7.png';
+import onlineImg from '../../../assets/onlineImg.png';
 
 const images = {
   add,
@@ -158,6 +159,7 @@ const images = {
   message5,
   message6,
   message7,
+  onlineImg,
 };
 
 export default images;

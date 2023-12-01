@@ -103,19 +103,37 @@ export default function Inbox() {
           ImgSource={images.searchIconn}
         />
         <ScrollView>
+          <View style={styles.marginTop}>
+
           {chats.map((item, index) => {
             return (
               <TouchableOpacity style={styles.mapView}>
                 <View style={styles.imageNameView}>
                   <Image source={item.profile} style={styles.profile} />
-                  <View>
-                    <Text>{item.name}</Text>
-                    <Text>{item.message}</Text>
+                  {item.online && (
+                    <Image source={images.onlineImg} style={styles.onlineImg} />
+                  )}
+                  <View style={styles.nameMainVidew}>
+                    <Text style={styles.name}>{item.name}</Text>
+                    <Text
+                      style={
+                        item.unread ? styles.messageUnread : styles.message
+                      }>
+                      {item.message}
+                    </Text>
                   </View>
                 </View>
+                {item.unread && (
+                  <View style={styles.unreadView}>
+                    <Text style={styles.unreadText}>{item.unreadCount}</Text>
+                  </View>
+                )}
               </TouchableOpacity>
             );
           })}
+          </View>
+
+        <View style={styles.marginBottom}></View>
         </ScrollView>
       </View>
     </SafeAreaView>
