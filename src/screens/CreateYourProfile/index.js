@@ -11,7 +11,7 @@ import {styles} from './style';
 import Header from '../../components/Header';
 import images from '../../services/utilities/images';
 
-export default function CreateYourProfile() {
+export default function CreateYourProfile({navigation}) {
   return (
     <SafeAreaView>
       <View style={styles.MainContainer}>
@@ -54,7 +54,7 @@ export default function CreateYourProfile() {
             </Text>
             <Image source={images.location} style={styles.imgSty} />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.btnView}>
+          <TouchableOpacity style={styles.btnView} onPress={()=>{navigation.navigate('BankDetails')}}>
             <Text style={styles.btnText}>Continue</Text>
           </TouchableOpacity>
         </View>

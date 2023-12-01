@@ -16,7 +16,6 @@ export const styles = StyleSheet.create({
     fontWeight: '600',
   },
   row: {
-    marginTop: sizes.screenHeight * 0.1,
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: colors.white,
@@ -43,6 +42,10 @@ export const styles = StyleSheet.create({
     height: sizes.screenHeight * 0.032,
     width: sizes.screenWidth * 0.04,
   },
+  passwordImg: {
+    height: sizes.screenHeight * 0.032,
+    width: sizes.screenWidth * 0.058,
+  },
   bottom: {
     bottom: sizes.screenHeight * 0.02,
   },
@@ -58,8 +61,8 @@ export const styles = StyleSheet.create({
   },
   bottomTextContainer: {
     flexDirection: 'row',
-    marginTop: sizes.screenHeight * 0.05,
-    alignSelf:'center'
+    marginTop: sizes.screenHeight * 0.1,
+    alignSelf: 'center',
   },
 
   textNormal: {
@@ -68,6 +71,40 @@ export const styles = StyleSheet.create({
 
   textTouchable: {
     color: colors.black,
-    fontWeight:'800'
+    fontWeight: '800',
+  },
+  marginTop: {
+    marginTop: sizes.screenHeight * 0.06,
+    marginBottom: sizes.screenHeight * 0.02,
+  },
+  eyeBtn: {
+    right: sizes.screenWidth * 0.07,
+  },
+  eyeImg: {
+    height: sizes.screenHeight * 0.025,
+    width: sizes.screenWidth * 0.058,
+  },
+  forgotText: {
+    color: colors.black,
+    fontSize: fontSize.smallM,
+    fontWeight: '500',
+  },
+  forgotPass: {
+    left: sizes.screenWidth * 0.55,
+    top: sizes.screenHeight * 0.01,
+  },
+  checkboxView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingBottom: sizes.screenHeight * 0.03,
+    alignSelf: 'center',
+  },
+  checkboxTitle: {color: colors.black, fontWeight: '500'},
+  forgotPassText: {
+    color: colors.appTextColor1,
+    fontWeight: 'bold',
+    textDecorationColor: colors.appTextColor1,
+    textDecorationLine: 'underline',
+    fontSize: fontSize.medium,
   },
 });

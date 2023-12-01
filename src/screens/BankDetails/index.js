@@ -10,7 +10,7 @@ import {styles} from './style';
 import Header from '../../components/Header';
 import {colors} from '../../services';
 
-export default function BankDetails() {
+export default function BankDetails({navigation}) {
   return (
     <SafeAreaView>
       <View style={styles.MainContainer}>
@@ -45,7 +45,7 @@ export default function BankDetails() {
             Terms & conditions <Text style={styles.textView1}>and</Text> Privacy
             policy
           </Text>
-          <TouchableOpacity style={styles.btnView}>
+          <TouchableOpacity style={styles.btnView} onPress={()=>{navigation.navigate('FacialVerification')}} >
             <Text style={styles.btnText}>Next</Text>
           </TouchableOpacity>
         </View>

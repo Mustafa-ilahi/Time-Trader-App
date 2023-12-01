@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {styles} from './style';
-import {SafeAreaView, View, Text, TouchableOpacity, Alert} from 'react-native';
+import {SafeAreaView, View, Text, TouchableOpacity, Alert, Image} from 'react-native';
 import {
   CodeField,
   Cursor,
@@ -9,8 +9,9 @@ import {
 } from 'react-native-confirmation-code-field';
 import Header from '../../components/Header';
 import Button from '../../components/Button';
+import images from '../../services/utilities/images';
 
-export default function OTP({navigation}) {
+export default function OTP2({navigation}) {
   const [value, setValue] = useState('');
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(60);
@@ -45,8 +46,9 @@ export default function OTP({navigation}) {
     <SafeAreaView>
       <View style={styles.container}>
         <View>
-          <Header title={'Verify Your Number'} />
+          <Header title={'Forgot Password'} />
         </View>
+          <Image source={images.forgotPass} style={styles.forgotPass}/>
         <View style={styles.content}>
           <View style={styles.textView}>
             <Text style={styles.text}>
@@ -87,7 +89,7 @@ export default function OTP({navigation}) {
         </View>
       </View>
       <View style={styles.btnBottom}>
-        <Button title={'Verify'} dark={true} onPress={()=>{navigation.navigate('CreateYourProfile')}}/>
+        <Button title={'Verify'} dark={true} onPress={()=>navigation.navigate('NewPassword')}/>
       </View>
     </SafeAreaView>
   );

@@ -27,6 +27,14 @@ import FacialVerification from './src/screens/FacialVerification';
 import Congratulations from './src/screens/Congratulations';
 import ResidencyProof from './src/screens/ResidencyProof';
 import ChatRequest from './src/screens/ChatRequest';
+import Login from './src/screens/Login';
+import LoginViaMobile from './src/screens/LoginViaMobile';
+import ForgotPassword from './src/screens/ForgotPassword';
+import OTP2 from './src/screens/OTP2';
+import NewPassword from './src/screens/NewPassword';
+import ForgotPassword2 from './src/screens/ForgotPassword2';
+import CreateNewPin from './src/screens/CreateNewPin';
+import SetFingerprint from './src/screens/SetFingerprint';
 
 export default function App() {
   return (
@@ -41,3 +49,7 @@ export default function App() {
   )
     // <EditMyProfile />;
 }
+
+
+
+

@@ -10,7 +10,7 @@ import React, {useState} from 'react';
 import {styles} from './style';
 import Header from '../../components/Header';
 import images from '../../services/utilities/images';
-export default function ResidencyProof() {
+export default function ResidencyProof({navigation}) {
 
   const [idMethod, setIdMethod] = useState('');
   return (
@@ -57,7 +57,7 @@ export default function ResidencyProof() {
               style={styles.ViewImg}
             />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.btnView}>
+          <TouchableOpacity style={styles.btnView} onPress={()=>{navigation.navigate('MyTabs')}}>
             <Text style={styles.btnText}>Next</Text>
           </TouchableOpacity>
         </View>

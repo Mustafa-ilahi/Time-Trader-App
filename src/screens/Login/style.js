@@ -14,25 +14,10 @@ export const styles = StyleSheet.create({
     color: colors.black,
     fontSize: fontSize.h1,
     fontWeight: '600',
+    width: sizes.screenWidth * 0.5,
   },
-  row: {
+  marginTop: {
     marginTop: sizes.screenHeight * 0.1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: colors.white,
-    padding: sizes.screenHeight * 0.01,
-    width: sizes.screenWidth * 0.9,
-    alignSelf: 'center',
-    borderRadius: sizes.screenWidth * 0.03,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-
-    elevation: 5,
   },
   input: {
     color: colors.black,
@@ -44,7 +29,7 @@ export const styles = StyleSheet.create({
     width: sizes.screenWidth * 0.04,
   },
   bottom: {
-    bottom: sizes.screenHeight * 0.02,
+    bottom: sizes.screenHeight * 0.05,
   },
   orText: {
     color: '#727272',
@@ -58,8 +43,7 @@ export const styles = StyleSheet.create({
   },
   bottomTextContainer: {
     flexDirection: 'row',
-    marginTop: sizes.screenHeight * 0.05,
-    alignSelf:'center'
+    alignSelf: 'center',
   },
 
   textNormal: {
@@ -68,6 +52,41 @@ export const styles = StyleSheet.create({
 
   textTouchable: {
     color: colors.black,
-    fontWeight:'800'
+    fontWeight: '800',
   },
+  button: {
+    backgroundColor: colors.black,
+    padding: sizes.screenHeight * 0.022,
+    width: sizes.screenWidth * 0.9,
+    alignSelf: 'center',
+    borderRadius: sizes.screenWidth * 0.1,
+  },
+  buttonTxt: {
+    color: colors.white,
+    textAlign: 'center',
+    fontSize: fontSize.h6,
+  },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingRight: sizes.screenWidth * 0.35,
+  },
+  img: {
+    height: sizes.screenHeight * 0.032,
+    width: sizes.screenWidth * 0.04,
+    left: sizes.screenWidth * 0.1,
+    tintColor: colors.white,
+  },
+  loginViaText:{
+    color:colors.black,
+    fontSize:fontSize.h6,
+    top:sizes.screenHeight*0.02
+  },
+  loginBg:{
+    height:sizes.screenHeight*0.19,
+    width:sizes.screenWidth*0.3,
+    alignSelf:'center',
+    top:sizes.screenHeight*0.07
+  }
 });

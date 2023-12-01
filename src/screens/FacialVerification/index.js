@@ -4,14 +4,14 @@ import { styles } from './style';
 import Header from '../../components/Header';
 import images from '../../services/utilities/images';
 
-export default function FacialVerification() {
+export default function FacialVerification({navigation}) {
   return (
     <View style={styles.MainContainer}>
       <Header title={'Facial Verification'} />
       <Image source={images.qrScanCam} style={styles.qrImg} />
       <Text style={styles.TextSty}>Verify your identity</Text>
-      <TouchableOpacity style={styles.btnView}>
-        <Text style={styles.btnText}>Next</Text>
+      <TouchableOpacity style={styles.btnView} onPress={()=>{navigation.navigate('ResidencyProof')}}>
+        <Text style={styles.btnText}>Let`s Verify</Text>
       </TouchableOpacity>
     </View>
   );

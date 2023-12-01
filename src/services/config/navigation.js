@@ -29,6 +29,15 @@ import FacialVerification from '../../screens/FacialVerification';
 import Congratulations from '../../screens/Congratulations';
 import ResidencyProof from '../../screens/ResidencyProof';
 import ChatRequest from '../../screens/ChatRequest';
+import Login from '../../screens/Login';
+import LoginViaMobile from '../../screens/LoginViaMobile';
+import ForgotPassorgotPassword from '../../screens/ForgotPassword';
+import ForgotPassword from '../../screens/ForgotPassword';
+import ForgotPassword2 from '../../screens/ForgotPassword2';
+import OTP2 from '../../screens/OTP2';
+import NewPassword from '../../screens/NewPassword';
+import CreateNewPin from '../../screens/CreateNewPin';
+import SetFingerprint from '../../screens/SetFingerprint';
 
 const Stack = createStackNavigator();
 export default function MainNavigator() {
@@ -44,6 +53,18 @@ export default function MainNavigator() {
 const MyStack = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
+
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="CreateAccount" component={CreateAccount} />
+      <Stack.Screen name="LoginViaMobile" component={LoginViaMobile} />
+      <Stack.Screen name="OTP" component={OTP} />
+      <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
+      <Stack.Screen name="ForgotPassword2" component={ForgotPassword2} />
+      <Stack.Screen name="OTP2" component={OTP2} />
+      <Stack.Screen name="NewPassword" component={NewPassword} />
+      <Stack.Screen name="CreateNewPin" component={CreateNewPin} />
+      <Stack.Screen name="SetFingerprint" component={SetFingerprint} />
+
       <Stack.Screen name="MyTabs" component={MyTabs} />
       <Stack.Screen
         name="WithdrawToBankAccount"
@@ -51,7 +72,6 @@ const MyStack = () => {
       />
       <Stack.Screen name="TransactionHistory" component={TransactionHistory} />
       <Stack.Screen name="TopUpWallet" component={TopUpWallet} />
-      <Stack.Screen name="Settings" component={Settings} />
       <Stack.Screen
         name="SettingNotification"
         component={SettingNotification}
@@ -60,7 +80,6 @@ const MyStack = () => {
       <Stack.Screen name="Profile" component={Profile} />
       <Stack.Screen name="Privacy" component={Privacy} />
       <Stack.Screen name="Payment" component={Payment} />
-      <Stack.Screen name="OTP" component={OTP} />
       <Stack.Screen name="Notification" component={Notification} />
       <Stack.Screen name="MainBalance" component={MainBalance} />
       <Stack.Screen name="Language" component={Language} />
@@ -70,7 +89,6 @@ const MyStack = () => {
         component={EarningSecondScreen}
       />
       <Stack.Screen name="Earning" component={Earning} />
-      <Stack.Screen name="CreateAccount" component={CreateAccount} />
       <Stack.Screen name="Cards" component={Cards} />
       <Stack.Screen name="CardDetails" component={CardDetails} />
       <Stack.Screen name="AddNewCard" component={AddNewCard} />

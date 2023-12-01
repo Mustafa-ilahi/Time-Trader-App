@@ -85,6 +85,16 @@ import clip from '../../../assets/clip.png';
 import mic from '../../../assets/mic.png';
 import phoneImg from '../../../assets/phoneImg.png';
 import sendBtn from '../../../assets/sendBtn.png';
+import appleIcon from '../../../assets/appleIcon.png';
+import googleIcon from '../../../assets/googleIcon.png';
+import loginBg from '../../../assets/loginBg.png';
+import password from '../../../assets/password.png';
+import eye from '../../../assets/eye.png';
+import forgotPass from '../../../assets/forgotPass.png';
+import check from '../../../assets/check.png';
+import message from '../../../assets/message.png';
+import user from '../../../assets/user.png';
+import fingerprint from '../../../assets/fingerprint.png';
 
 const images = {
   add,
@@ -176,6 +186,17 @@ const images = {
   onlineImg,
   editIcon,
   qrScanCam,
+  appleIcon,
+  googleIcon,
+  loginBg,
+  password,
+  eye,
+  forgotPass,
+  check,
+  message,
+  user,
+  editIcon,
+  fingerprint
 };
 
 export default images;
