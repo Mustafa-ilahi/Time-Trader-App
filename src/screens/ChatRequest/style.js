@@ -7,12 +7,25 @@ export const styles = StyleSheet.create({
         width: sizes.screenWidth,
       },
       row:{
-        flexDirection:'row'
+        flexDirection:'row',
+        position:'absolute',
+        right:sizes.screenWidth * 0.05,
+        top:sizes.screenHeight * 0.03,
+        justifyContent:'space-between',
+        width:sizes.screenWidth * 0.15,
       },
       imgSty:{
         resizeMode:'contain',
-        width:sizes.screenWidth * 0.07,
+        width:sizes.screenWidth * 0.06,
         height:sizes.screenHeight * 0.04,
-        backgroundColor:'red'
+        // position:'absolute'
+        // backgroundColor:'red'
+      },
+      columnView:{
+        color:colors.disabledBg3,
+        alignSelf:'center'
+      },
+      center:{
+        alignSelf:'center'
       },
 })

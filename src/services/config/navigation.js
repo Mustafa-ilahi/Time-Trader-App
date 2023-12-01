@@ -54,6 +54,7 @@ const MyStack = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
 
+      <Stack.Screen name="ChatRequest" component={ChatRequest} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="CreateAccount" component={CreateAccount} />
       <Stack.Screen name="LoginViaMobile" component={LoginViaMobile} />
@@ -98,7 +99,6 @@ const MyStack = () => {
       <Stack.Screen name="FacialVerification" component={FacialVerification} />
       <Stack.Screen name="Congratulations" component={Congratulations} />
       <Stack.Screen name="ResidencyProof" component={ResidencyProof} />
-      <Stack.Screen name="ChatRequest" component={ChatRequest} />
     </Stack.Navigator>
   );
 };

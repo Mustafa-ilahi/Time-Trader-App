@@ -94,6 +94,10 @@ import forgotPass from '../../../assets/forgotPass.png';
 import check from '../../../assets/check.png';
 import message from '../../../assets/message.png';
 import user from '../../../assets/user.png';
+import contblack1 from '../../../assets/contblack1.png';
+import contblack2 from '../../../assets/contblack2.png';
+import contblue from '../../../assets/contblue.png';
+import contblue2 from '../../../assets/contblue2.png';
 import fingerprint from '../../../assets/fingerprint.png';
 
 const images = {
@@ -101,6 +105,10 @@ const images = {
   backIcon,
   notiCross,
   notiHeader,
+  contblack1,
+  contblack2,
+  contblue,
+  contblue2,
   clip,
   mic,
   phoneImg,

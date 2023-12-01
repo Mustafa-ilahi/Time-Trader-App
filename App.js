@@ -38,14 +38,8 @@ import SetFingerprint from './src/screens/SetFingerprint';
 
 export default function App() {
   return (
+    <MainNavigator />
 
-     <MainNavigator />
-    // <CreateYourProfile />
-    // <BankDetails />
-    // <FacialVerification />
-    // <Congratulations />
-    // <ResidencyProof />
-    // <ChatRequest />
   )
     // <EditMyProfile />;
 }
