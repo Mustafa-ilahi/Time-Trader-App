@@ -104,36 +104,38 @@ export default function Inbox() {
         />
         <ScrollView>
           <View style={styles.marginTop}>
-
-          {chats.map((item, index) => {
-            return (
-              <TouchableOpacity style={styles.mapView}>
-                <View style={styles.imageNameView}>
-                  <Image source={item.profile} style={styles.profile} />
-                  {item.online && (
-                    <Image source={images.onlineImg} style={styles.onlineImg} />
+            {chats.map((item, index) => {
+              return (
+                <TouchableOpacity style={styles.mapView} key={index}>
+                  <View style={styles.imageNameView}>
+                    <Image source={item.profile} style={styles.profile} />
+                    {item.online && (
+                      <Image
+                        source={images.onlineImg}
+                        style={styles.onlineImg}
+                      />
+                    )}
+                    <View style={styles.nameMainVidew}>
+                      <Text style={styles.name}>{item.name}</Text>
+                      <Text
+                        style={
+                          item.unread ? styles.messageUnread : styles.message
+                        }>
+                        {item.message}
+                      </Text>
+                    </View>
+                  </View>
+                  {item.unread && (
+                    <View style={styles.unreadView}>
+                      <Text style={styles.unreadText}>{item.unreadCount}</Text>
+                    </View>
                   )}
-                  <View style={styles.nameMainVidew}>
-                    <Text style={styles.name}>{item.name}</Text>
-                    <Text
-                      style={
-                        item.unread ? styles.messageUnread : styles.message
-                      }>
-                      {item.message}
-                    </Text>
-                  </View>
-                </View>
-                {item.unread && (
-                  <View style={styles.unreadView}>
-                    <Text style={styles.unreadText}>{item.unreadCount}</Text>
-                  </View>
-                )}
-              </TouchableOpacity>
-            );
-          })}
+                </TouchableOpacity>
+              );
+            })}
           </View>
 
-        <View style={styles.marginBottom}></View>
+          <View style={styles.marginBottom}></View>
         </ScrollView>
       </View>
     </SafeAreaView>

@@ -38,6 +38,7 @@ import OTP2 from '../../screens/OTP2';
 import NewPassword from '../../screens/NewPassword';
 import CreateNewPin from '../../screens/CreateNewPin';
 import SetFingerprint from '../../screens/SetFingerprint';
+import Onboarding from '../../screens/Onboarding';
 
 const Stack = createStackNavigator();
 export default function MainNavigator() {
@@ -53,7 +54,6 @@ export default function MainNavigator() {
 const MyStack = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
-
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="CreateAccount" component={CreateAccount} />
       <Stack.Screen name="LoginViaMobile" component={LoginViaMobile} />
@@ -64,6 +64,7 @@ const MyStack = () => {
       <Stack.Screen name="NewPassword" component={NewPassword} />
       <Stack.Screen name="CreateNewPin" component={CreateNewPin} />
       <Stack.Screen name="SetFingerprint" component={SetFingerprint} />
+      <Stack.Screen name="Onboarding" component={Onboarding} />
 
       <Stack.Screen name="MyTabs" component={MyTabs} />
       <Stack.Screen

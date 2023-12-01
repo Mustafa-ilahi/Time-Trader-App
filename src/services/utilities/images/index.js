@@ -95,6 +95,9 @@ import check from '../../../assets/check.png';
 import message from '../../../assets/message.png';
 import user from '../../../assets/user.png';
 import fingerprint from '../../../assets/fingerprint.png';
+import onBoarding from '../../../assets/onBoarding.png';
+import onBoarding2 from '../../../assets/onBoarding2.png';
+import onbordingBottom from '../../../assets/onbordingBottom.png';
 
 const images = {
   add,
@@ -196,7 +199,10 @@ const images = {
   message,
   user,
   editIcon,
-  fingerprint
+  fingerprint,
+  onBoarding,
+  onBoarding2,
+  onbordingBottom,
 };
 
 export default images;
