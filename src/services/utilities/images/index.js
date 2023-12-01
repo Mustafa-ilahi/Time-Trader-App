@@ -77,6 +77,10 @@ import message5 from '../../../assets/message5.png';
 import message6 from '../../../assets/message6.png';
 import message7 from '../../../assets/message7.png';
 import onlineImg from '../../../assets/onlineImg.png';
+import editIcon from '../../../assets/editIcon.png';
+import qrScanCam from '../../../assets/qrScanCam.png';
+import congProfile from '../../../assets/congProfile.png';
+import loading from '../../../assets/loading.png';
 
 const images = {
   add,
@@ -93,9 +97,11 @@ const images = {
   email,
   downArrow,
   calender,
+  loading,
   flag,
   location,
   radiobtnOpen,
+  congProfile,
   radiobtnOff,
   graphOne,
   graphTwo,
@@ -160,6 +166,8 @@ const images = {
   message6,
   message7,
   onlineImg,
+  editIcon,
+  qrScanCam,
 };
 
 export default images;

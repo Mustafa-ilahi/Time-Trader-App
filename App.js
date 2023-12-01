@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {SafeAreaView, Text, View} from 'react-native';
 import OTP from './src/screens/OTP';
 import CreateAccount from './src/screens/CreateAccount';
 import Notification from './src/screens/Notification';
@@ -21,7 +21,19 @@ import Cards from './src/screens/Cards';
 import AddNewCard from './src/screens/AddNewCard';
 import CardDetails from './src/screens/CardDetails';
 import MainNavigator from './src/services/config/navigation';
+import CreateYourProfile from './src/screens/CreateYourProfile';
+import BankDetails from './src/screens/BankDetails';
+import FacialVerification from './src/screens/FacialVerification';
+import Congratulations from './src/screens/Congratulations';
 
 export default function App() {
-  return <MainNavigator />;
+  return (
+
+    // <CreateYourProfile />
+    // <BankDetails />
+    // <FacialVerification />
+    <Congratulations />
+  )
+  // <MainNavigator />;
+    // <EditMyProfile />;
 }

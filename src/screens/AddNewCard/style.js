@@ -150,4 +150,12 @@ export const styles = StyleSheet.create({
     fontSize: fontSize.large,
     fontWeight: '600',
   },
+  accountDetailsInput: {
+    color: colors.black,
+    width: sizes.screenWidth * 0.75,
+    fontSize: fontSize.large,
+    fontWeight: '500',
+    marginLeft: sizes.screenWidth * 0.05,
+    marginTop: sizes.screenHeight * 0.04,
+  },
 });
