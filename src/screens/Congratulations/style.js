@@ -7,12 +7,6 @@ export const styles  = StyleSheet.create({
         height: sizes.screenHeight,
         width: sizes.screenWidth,
       },
-    //   congMainView:{
-    //     alignContent:'center',
-    //     justifyContent:'center',
-    //     alignItems:'center',
-    //     alignSelf:'center'
-    //   },
       qrImg:{
         resizeMode:'contain',
         width:sizes.screenWidth * 0.4,

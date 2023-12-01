@@ -25,6 +25,7 @@ import CreateYourProfile from './src/screens/CreateYourProfile';
 import BankDetails from './src/screens/BankDetails';
 import FacialVerification from './src/screens/FacialVerification';
 import Congratulations from './src/screens/Congratulations';
+import ResidencyProof from './src/screens/ResidencyProof';
 
 export default function App() {
   return (
@@ -32,7 +33,8 @@ export default function App() {
     // <CreateYourProfile />
     // <BankDetails />
     // <FacialVerification />
-    <Congratulations />
+    // <Congratulations />
+    <ResidencyProof />
   )
   // <MainNavigator />;
     // <EditMyProfile />;
