@@ -23,6 +23,12 @@ import TopUpWallet from '../../screens/TopUpWallet';
 import TransactionHistory from '../../screens/TransactionHistory';
 import WithdrawToBankAccount from '../../screens/WithdrawToBankAccount';
 import TabNavigation from './TabNavigation';
+import CreateYourProfile from '../../screens/CreateYourProfile';
+import BankDetails from '../../screens/BankDetails';
+import FacialVerification from '../../screens/FacialVerification';
+import Congratulations from '../../screens/Congratulations';
+import ResidencyProof from '../../screens/ResidencyProof';
+import ChatRequest from '../../screens/ChatRequest';
 
 const Stack = createStackNavigator();
 export default function MainNavigator() {
@@ -38,10 +44,7 @@ export default function MainNavigator() {
 const MyStack = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
-         <Stack.Screen
-        name="MyTabs"
-        component={MyTabs}
-      />
+      <Stack.Screen name="MyTabs" component={MyTabs} />
       <Stack.Screen
         name="WithdrawToBankAccount"
         component={WithdrawToBankAccount}
@@ -72,6 +75,12 @@ const MyStack = () => {
       <Stack.Screen name="CardDetails" component={CardDetails} />
       <Stack.Screen name="AddNewCard" component={AddNewCard} />
       <Stack.Screen name="LandingPage" component={LandingPage} />
+      <Stack.Screen name="CreateYourProfile" component={CreateYourProfile} />
+      <Stack.Screen name="BankDetails" component={BankDetails} />
+      <Stack.Screen name="FacialVerification" component={FacialVerification} />
+      <Stack.Screen name="Congratulations" component={Congratulations} />
+      <Stack.Screen name="ResidencyProof" component={ResidencyProof} />
+      <Stack.Screen name="ChatRequest" component={ChatRequest} />
     </Stack.Navigator>
   );
 };

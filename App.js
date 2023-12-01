@@ -31,13 +31,13 @@ import ChatRequest from './src/screens/ChatRequest';
 export default function App() {
   return (
 
+     <MainNavigator />
     // <CreateYourProfile />
     // <BankDetails />
     // <FacialVerification />
     // <Congratulations />
     // <ResidencyProof />
-    <ChatRequest />
+    // <ChatRequest />
   )
-  // <MainNavigator />;
     // <EditMyProfile />;
 }
