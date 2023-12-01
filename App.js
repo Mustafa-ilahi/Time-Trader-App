@@ -26,6 +26,7 @@ import BankDetails from './src/screens/BankDetails';
 import FacialVerification from './src/screens/FacialVerification';
 import Congratulations from './src/screens/Congratulations';
 import ResidencyProof from './src/screens/ResidencyProof';
+import ChatRequest from './src/screens/ChatRequest';
 
 export default function App() {
   return (
@@ -34,7 +35,8 @@ export default function App() {
     // <BankDetails />
     // <FacialVerification />
     // <Congratulations />
-    <ResidencyProof />
+    // <ResidencyProof />
+    <ChatRequest />
   )
   // <MainNavigator />;
     // <EditMyProfile />;

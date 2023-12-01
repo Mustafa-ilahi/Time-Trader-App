@@ -81,12 +81,20 @@ import editIcon from '../../../assets/editIcon.png';
 import qrScanCam from '../../../assets/qrScanCam.png';
 import congProfile from '../../../assets/congProfile.png';
 import loading from '../../../assets/loading.png';
+import clip from '../../../assets/clip.png';
+import mic from '../../../assets/mic.png';
+import phoneImg from '../../../assets/phoneImg.png';
+import sendBtn from '../../../assets/sendBtn.png';
 
 const images = {
   add,
   backIcon,
   notiCross,
   notiHeader,
+  clip,
+  mic,
+  phoneImg,
+  sendBtn,
   notiMobile,
   notiTick,
   notiTicket,
