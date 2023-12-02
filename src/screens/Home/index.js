@@ -44,7 +44,7 @@ export default function Home() {
             /> */}
           </MapView>
 
-          {header ? (
+          {!header ? (
             <View style={[styles.row, {bottom: sizes.screenHeight * 0.99}]}>
               <TouchableOpacity style={{left: sizes.screenWidth * 0.03}}>
                 <Image source={images.drawer} />

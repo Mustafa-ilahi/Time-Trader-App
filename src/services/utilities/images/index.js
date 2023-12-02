@@ -94,6 +94,10 @@ import forgotPass from '../../../assets/forgotPass.png';
 import check from '../../../assets/check.png';
 import message from '../../../assets/message.png';
 import user from '../../../assets/user.png';
+import contblack1 from '../../../assets/contblack1.png';
+import contblack2 from '../../../assets/contblack2.png';
+import contblue from '../../../assets/contblue.png';
+import contblue2 from '../../../assets/contblue2.png';
 import fingerprint from '../../../assets/fingerprint.png';
 import marker from '../../../assets/marker.png';
 import goBtn from '../../../assets/goBtn.png';
@@ -101,12 +105,19 @@ import sheild from '../../../assets/sheild.png';
 import filterIcon2 from '../../../assets/filterIcon2.png';
 import drawer from '../../../assets/drawer.png';
 import notif from '../../../assets/notif.png';
+import onBoarding from '../../../assets/onBoarding.png';
+import onBoarding2 from '../../../assets/onBoarding2.png';
+import onbordingBottom from '../../../assets/onbordingBottom.png';
 
 const images = {
   add,
   backIcon,
   notiCross,
   notiHeader,
+  contblack1,
+  contblack2,
+  contblue,
+  contblue2,
   clip,
   mic,
   phoneImg,
@@ -208,7 +219,10 @@ const images = {
   sheild,
   filterIcon2,
   drawer,
-  notif
+  notif,
+  onBoarding,
+  onBoarding2,
+  onbordingBottom,
 };
 
 export default images;
