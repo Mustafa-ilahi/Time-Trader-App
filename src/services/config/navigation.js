@@ -99,6 +99,7 @@ const MyStack = () => {
       <Stack.Screen name="Congratulations" component={Congratulations} />
       <Stack.Screen name="ResidencyProof" component={ResidencyProof} />
       <Stack.Screen name="ChatRequest" component={ChatRequest} />
+      <Stack.Screen name="Settings" component={Settings} />
     </Stack.Navigator>
   );
 };

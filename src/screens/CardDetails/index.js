@@ -17,7 +17,7 @@ import images from '../../services/utilities/images';
 import Button from '../../components/Button';
 import Modal from 'react-native-modal';
 
-export default function CardDetails() {
+export default function CardDetails({navigation}) {
   const [accountNumber, setAccountNumber] = useState('');
   const [modalShow, setModalShow] = useState(false);
 
@@ -25,7 +25,9 @@ export default function CardDetails() {
     <SafeAreaView>
       <View style={styles.body}>
         <View style={styles.header}>
-          <TouchableOpacity style={{width: sizes.screenHeight * 0.07}}>
+          <TouchableOpacity
+            style={{width: sizes.screenHeight * 0.07}}
+            onPress={() => navigation.goBack()}>
             <Image style={styles.headerIcon} source={images.leftArrowIcon} />
           </TouchableOpacity>
           <Text style={styles.headerText}>Card Details</Text>
@@ -88,6 +90,7 @@ export default function CardDetails() {
               style={styles.modalBtn}
               onPress={() => {
                 setModalShow(!modalShow);
+                navigation.navigate('MyTabs');
               }}>
               <Text style={styles.modalBtnText}>Ok</Text>
             </TouchableOpacity>

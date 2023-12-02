@@ -9,6 +9,8 @@ import {fontSize} from '../utilities/fonts';
 import Booking from '../../screens/Booking';
 import Inbox from '../../screens/Inbox';
 import Home from '../../screens/Home';
+import Profile from '../../screens/Profile';
+import MainBalance from '../../screens/MainBalance';
 
 const Tab = createBottomTabNavigator();
 
@@ -88,7 +90,7 @@ export default function TabNavigation() {
       />
       <Tab.Screen
         name="bottom4"
-        component={CardDetails}
+        component={MainBalance}
         options={{
           tabBarIcon: ({focused}) => (
             <Image
@@ -108,7 +110,7 @@ export default function TabNavigation() {
       />
       <Tab.Screen
         name="bottom5"
-        component={CardDetails}
+        component={Profile}
         options={{
           tabBarIcon: ({focused}) => (
             <Image

@@ -10,7 +10,7 @@ export default function FacialVerification({navigation}) {
       <Header title={'Facial Verification'} />
       <Image source={images.qrScanCam} style={styles.qrImg} />
       <Text style={styles.TextSty}>Verify your identity</Text>
-      <TouchableOpacity style={styles.btnView} onPress={()=>{navigation.navigate('ResidencyProof')}}>
+      <TouchableOpacity style={styles.btnView} onPress={()=>{navigation.navigate('Congratulations')}}>
         <Text style={styles.btnText}>Let`s Verify</Text>
       </TouchableOpacity>
     </View>

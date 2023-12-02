@@ -17,7 +17,7 @@ import images from '../../services/utilities/images';
 import Button from '../../components/Button';
 import Modal from 'react-native-modal';
 
-export default function AddNewCard() {
+export default function AddNewCard({navigation}) {
   const [accountNumber, setAccountNumber] = useState('');
   const [modalShow, setModalShow] = useState(false);
 
@@ -101,6 +101,7 @@ export default function AddNewCard() {
               style={styles.modalBtn}
               onPress={() => {
                 setModalShow(!modalShow);
+                navigation.navigate('CardDetails')
               }}>
               <Text style={styles.modalBtnText}>Ok</Text>
             </TouchableOpacity>

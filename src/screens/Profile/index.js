@@ -4,7 +4,7 @@ import {styles} from './style';
 import Header from '../../components/Header';
 import images from '../../services/utilities/images';
 
-export default function Profile() {
+export default function Profile({navigation}) {
   const [horizontalMenu, setHorizontalMenu] = useState([
     {name: 'Excellent Service', image: images.imgOne, number: images.numberOne},
     {
@@ -40,7 +40,7 @@ export default function Profile() {
   return (
     <View style={styles.MainContainer}>
       <Header title={'Profile'} />
-        <TouchableOpacity style={styles.headerImgTouchable}>
+        <TouchableOpacity style={styles.headerImgTouchable} onPress={()=>navigation.navigate("Settings")}>
           <Image source={images.pencil} style={styles.headerImg} />
         </TouchableOpacity>
       <ScrollView>

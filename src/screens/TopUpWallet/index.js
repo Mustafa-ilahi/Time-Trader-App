@@ -17,7 +17,7 @@ import images from '../../services/utilities/images';
 import Button from '../../components/Button';
 import Modal from 'react-native-modal';
 
-export default function TopUpWallet() {
+export default function TopUpWallet({navigation}) {
   const [amount, setAmount] = useState(0);
   const [modalShow, setModalShow] = useState(false);
 
@@ -26,11 +26,11 @@ export default function TopUpWallet() {
       <View style={styles.body}>
         <View>
           <View style={styles.header}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>navigation.goBack()}>
               <Image style={styles.headerIcon} source={images.leftArrowIcon} />
             </TouchableOpacity>
             <Text style={styles.headerText}>Top Up Wallet</Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>navigation.goBack()}>
               <Image style={styles.headerIcon2} source={images.crossIconn} />
             </TouchableOpacity>
           </View>
@@ -105,6 +105,7 @@ export default function TopUpWallet() {
             style={styles.modalBtn}
             onPress={() => {
               setModalShow(!modalShow);
+              navigation.navigate('MainBalance')
             }}>
             <Text style={styles.modalBtnText}>Ok</Text>
           </TouchableOpacity>

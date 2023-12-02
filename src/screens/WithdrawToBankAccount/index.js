@@ -17,7 +17,7 @@ import images from '../../services/utilities/images';
 import Button from '../../components/Button';
 import Modal from 'react-native-modal';
 
-export default function WithdrawToBankAccount() {
+export default function WithdrawToBankAccount({navigation}) {
   const [amount, setAmount] = useState(0);
   const [modalShow, setModalShow] = useState(false);
 
@@ -58,7 +58,7 @@ export default function WithdrawToBankAccount() {
         </View>
         <View style={styles.horizontalLine}></View>
 
-        <TouchableOpacity style={styles.continueBtn}>
+        <TouchableOpacity style={styles.continueBtn} onPress={() => navigation.navigate('Cards')}>
           <Text style={styles.continueBtnText}>Continue</Text>
         </TouchableOpacity>
       </View>

@@ -4,7 +4,7 @@ import {styles} from './style';
 import Header from '../../components/Header';
 import images from '../../services/utilities/images';
 
-export default function Earning() {
+export default function Earning({navigation}) {
   return (
     <SafeAreaView>
       <View style={styles.mainView}>
@@ -32,7 +32,7 @@ export default function Earning() {
               <Text style={styles.graphText3}>Points</Text>
               <Text style={styles.graphText3}>50</Text>
             </View>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('EarningSecondScreen')}>
               <Text style={styles.btn}>See Details</Text>
             </TouchableOpacity>
             <View style={styles.horizontalLine}></View>

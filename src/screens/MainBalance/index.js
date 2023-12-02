@@ -16,14 +16,15 @@ import {colors, sizes} from '../../services';
 import images from '../../services/utilities/images';
 import Button from '../../components/Button';
 
-export default function MainBalance() {
+export default function MainBalance({navigation}) {
   return (
     <SafeAreaView>
       <ImageBackground source={images.mainBgg} style={styles.container}>
         <View style={styles.body}>
           <View style={styles.headerRow}>
             <Text style={styles.headerRowText}>Wallets</Text>
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('CardDetails')}>
               <Image style={styles.headerRowImg} source={images.addCard} />
             </TouchableOpacity>
           </View>
@@ -32,7 +33,9 @@ export default function MainBalance() {
           <Text style={styles.mainBalance}>R 1000</Text>
 
           <View style={styles.topUpRow}>
-            <TouchableOpacity style={styles.topUpContainer}>
+            <TouchableOpacity
+              style={styles.topUpContainer}
+              onPress={() => navigation.navigate('TopUpWallet')}>
               <Image style={styles.topUpIcon} source={images.uploadLine} />
               <Text style={styles.topUpText}>Top up</Text>
             </TouchableOpacity>
@@ -40,7 +43,7 @@ export default function MainBalance() {
               style={styles.topUpSeparator}
               source={images.SeparatorVerticall}
             />
-            <TouchableOpacity style={styles.topUpContainer}>
+            <TouchableOpacity style={styles.topUpContainer} onPress={() => navigation.navigate('WithdrawToBankAccount')}>
               <Image style={styles.topUpIcon} source={images.downloadLine} />
               <Text style={styles.topUpText}>Withdraw</Text>
             </TouchableOpacity>
@@ -77,7 +80,7 @@ export default function MainBalance() {
 
           <View style={styles.row}>
             <Text style={styles.blackTextBold}>Latest Transactions</Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('TransactionHistory')}>
               <Text style={styles.disabledText}>View all</Text>
             </TouchableOpacity>
           </View>

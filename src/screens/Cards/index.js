@@ -17,7 +17,7 @@ import images from '../../services/utilities/images';
 import Button from '../../components/Button';
 import Modal from 'react-native-modal';
 
-export default function Cards() {
+export default function Cards({navigation}) {
   const [amount, setAmount] = useState(0);
   const [modalShow, setModalShow] = useState(false);
 
@@ -41,7 +41,7 @@ export default function Cards() {
             Connect a credit/debit card and top up your wallet
           </Text>
 
-          <TouchableOpacity style={styles.continueBtn}>
+          <TouchableOpacity style={styles.continueBtn} onPress={() => navigation.navigate('AddNewCard')}>
             <Text style={styles.continueBtnText}>Connect Card</Text>
           </TouchableOpacity>
         </View>

@@ -17,14 +17,14 @@ import images from '../../services/utilities/images';
 import Button from '../../components/Button';
 import Modal from 'react-native-modal';
 
-export default function TransactionHistory() {
+export default function TransactionHistory({navigation}) {
   const [modalShow, setModalShow] = useState(false);
 
   return (
     <SafeAreaView>
       <ScrollView>
         <View style={styles.headerRow}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=>navigation.goBack()}>
             <Image style={styles.headerRowImg} source={images.backIcon} />
           </TouchableOpacity>
           <Text style={styles.headerRowText}>Transaction History</Text>

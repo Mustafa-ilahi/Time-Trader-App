@@ -4,7 +4,7 @@ import {styles} from './style';
 import Header from '../../components/Header';
 import images from '../../services/utilities/images';
 
-export default function EditMyProfile() {
+export default function EditMyProfile({navigation}) {
   return (
     <SafeAreaView>
     <View style={styles.MainContainer}>
@@ -41,8 +41,8 @@ export default function EditMyProfile() {
           <Text style={styles.listTextSty}>364 Stillwater Ave. Attleboro</Text>
           <Image source={images.location} style={styles.imgSty} />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.btnView}>
-            <Text style={styles.btnText}>update</Text>
+        <TouchableOpacity style={styles.btnView} onPress={() => navigation.navigate('Profile')}>
+            <Text style={styles.btnText}>Update</Text>
         </TouchableOpacity>
       </View>
     </View>
