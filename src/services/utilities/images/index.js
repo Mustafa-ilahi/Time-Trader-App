@@ -95,6 +95,12 @@ import check from '../../../assets/check.png';
 import message from '../../../assets/message.png';
 import user from '../../../assets/user.png';
 import fingerprint from '../../../assets/fingerprint.png';
+import marker from '../../../assets/marker.png';
+import goBtn from '../../../assets/goBtn.png';
+import sheild from '../../../assets/sheild.png';
+import filterIcon2 from '../../../assets/filterIcon2.png';
+import drawer from '../../../assets/drawer.png';
+import notif from '../../../assets/notif.png';
 
 const images = {
   add,
@@ -196,7 +202,13 @@ const images = {
   message,
   user,
   editIcon,
-  fingerprint
+  fingerprint,
+  marker,
+  goBtn,
+  sheild,
+  filterIcon2,
+  drawer,
+  notif
 };
 
 export default images;

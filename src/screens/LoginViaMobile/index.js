@@ -63,7 +63,7 @@ export default function LoginViaMobile({navigation}) {
           <Text style={styles.checkboxTitle}>Remember me</Text>
         </View>
         <View style={styles.bottom}>
-          <Button title={'Sign In'} dark={true} />
+          <Button title={'Sign In'} dark={true} onPress={()=>navigation.navigate('MyTabs')}/>
         </View>
         <View style={styles.bottomTextContainer}>
           <Text style={styles.textNormal}>Don't have an account? </Text>

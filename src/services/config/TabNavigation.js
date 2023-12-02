@@ -8,6 +8,7 @@ import CardDetails from '../../screens/CardDetails';
 import {fontSize} from '../utilities/fonts';
 import Booking from '../../screens/Booking';
 import Inbox from '../../screens/Inbox';
+import Home from '../../screens/Home';
 
 const Tab = createBottomTabNavigator();
 
@@ -27,7 +28,7 @@ export default function TabNavigation() {
       }}>
       <Tab.Screen
         name="bottom1"
-        component={CardDetails}
+        component={Home}
         options={{
           tabBarIcon: ({focused}) => (
             <Image
