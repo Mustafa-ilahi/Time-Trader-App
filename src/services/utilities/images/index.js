@@ -108,6 +108,14 @@ import notif from '../../../assets/notif.png';
 import onBoarding from '../../../assets/onBoarding.png';
 import onBoarding2 from '../../../assets/onBoarding2.png';
 import onbordingBottom from '../../../assets/onbordingBottom.png';
+import searchIcon2 from '../../../assets/searchIcon2.png';
+import upArrow from '../../../assets/upArrow.png';
+import facebook from '../../../assets/facebook.png';
+import insta from '../../../assets/insta.png';
+import website from '../../../assets/website.png';
+import whatsApp from '../../../assets/whatsApp.png';
+import support from '../../../assets/support.png';
+import twitter from '../../../assets/twitter.png';
 
 const images = {
   add,
@@ -118,8 +126,16 @@ const images = {
   contblack2,
   contblue,
   contblue2,
+  searchIcon2,
+  insta,
+  facebook,
+  website,
+  whatsApp,
+  support,
+  twitter,
   clip,
   mic,
+  upArrow,
   phoneImg,
   sendBtn,
   notiMobile,
