@@ -28,8 +28,8 @@ export default function Settings({navigation}) {
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.listView}
-              onPress={() => navigation.navigate('Notification')}>
-              <Text style={styles.listViewText}>Notification</Text>
+              onPress={() => navigation.navigate('SettingNotification')}>
+              <Text style={styles.listViewText}>Notification settings</Text>
               <Image source={images.rightArrow} style={styles.tichImg} />
             </TouchableOpacity>
             <TouchableOpacity
@@ -44,21 +44,29 @@ export default function Settings({navigation}) {
               <Text style={styles.listViewText}>Security</Text>
               <Image source={images.rightArrow} style={styles.tichImg} />
             </TouchableOpacity>
-              <TouchableOpacity style={styles.listView} onPress={() => navigation.navigate('Payment')} >
+              {/* <TouchableOpacity style={styles.listView} onPress={() => navigation.navigate('Payment')} >
               <Text style={styles.listViewText}>Payment </Text>
               <Image source={images.rightArrow} style={styles.tichImg} />
-            </TouchableOpacity>
+            </TouchableOpacity> */}
             <TouchableOpacity
               style={styles.listView}
               onPress={() => navigation.navigate('Privacy')}>
               <Text style={styles.listViewText}>Privacy & Policy</Text>
               <Image source={images.rightArrow} style={styles.tichImg} />
             </TouchableOpacity>
-          
-            <TouchableOpacity style={styles.listView} onPress={() => navigation.navigate('Earning')} >
-              <Text style={styles.listViewText}>Terms and services </Text>
+            <TouchableOpacity
+              style={styles.listView}
+              onPress={() => navigation.navigate('Earning')}>
+              <Text style={styles.listViewText}>Earnings</Text>
               <Image source={images.rightArrow} style={styles.tichImg} />
             </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.listView}
+              onPress={() => navigation.navigate('HelpCenter')}>
+              <Text style={styles.listViewText}>Help Center</Text>
+              <Image source={images.rightArrow} style={styles.tichImg} />
+            </TouchableOpacity>
+           
             <TouchableOpacity style={styles.listView} >
               <Text style={styles.listViewText2}>Logout</Text>
             </TouchableOpacity>

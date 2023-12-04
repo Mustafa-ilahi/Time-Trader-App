@@ -15,9 +15,11 @@ import images from '../../services/utilities/images';
 import Button from '../../components/Button';
 import MapView, {Marker} from 'react-native-maps';
 
-export default function Home() {
+export default function Home({navigation}) {
   const [offline, showOffline] = useState(false);
   const [header, showHeader] = useState(false);
+  const [userStatus, setUserStatus] = useState('Online');
+  const [showRecommended, setShowRecommended] = useState(false);
   return (
     <SafeAreaView>
       <View style={styles.container}>
@@ -46,9 +48,9 @@ export default function Home() {
 
           {!header ? (
             <View style={[styles.row, {bottom: sizes.screenHeight * 0.99}]}>
-              <TouchableOpacity style={{left: sizes.screenWidth * 0.03}}>
-                <Image source={images.drawer} />
-              </TouchableOpacity>
+              <View style={{marginLeft: sizes.screenWidth * 0.17}}>
+                {/* <Image source={images.drawer} /> */}
+              </View>
               <TouchableOpacity
                 style={styles.headerView}
                 onPress={() => showHeader(!header)}>
@@ -61,12 +63,14 @@ export default function Home() {
                   R 152.20
                 </Text>
               </TouchableOpacity>
-              <TouchableOpacity style={{left: sizes.screenWidth * 0.4}}>
+              <TouchableOpacity
+                style={{left: sizes.screenWidth * 0.4}}
+                onPress={() => navigation.navigate('Notification')}>
                 <Image
                   source={images.notif}
                   style={{
                     height: sizes.screenHeight * 0.08,
-                    width: sizes.screenWidth * 0.15,
+                    width: sizes.screenWidth * 0.17,
                   }}
                 />
               </TouchableOpacity>
@@ -156,33 +160,47 @@ export default function Home() {
             <TouchableOpacity style={styles.goBtnView}>
               <Image source={images.goBtn} style={styles.goBtn} />
             </TouchableOpacity>
-            <TouchableOpacity style={styles.sheildBtn}>
-              <Image source={images.sheild} style={styles.sheild} />
-            </TouchableOpacity>
-            {!offline ? (
-              <TouchableOpacity
-                style={[styles.offlineView]}
-                onPress={() => showOffline(!offline)}>
-                <View style={styles.blackView}></View>
-                <View style={styles.row}>
-                  <Image
-                    source={images.filterIcon2}
-                    style={styles.filterIcon2}
-                  />
-                  <Text style={styles.offlineText}>You’re Offline</Text>
-                </View>
+            {userStatus === 'Online' ? (
+              <TouchableOpacity style={styles.sheildBtn}>
+                <Image source={images.sheild} style={styles.sheild} />
               </TouchableOpacity>
             ) : (
-              <TouchableOpacity
-                style={[styles.offlineView2]}
-                onPress={() => showOffline(!offline)}>
+              <TouchableOpacity style={styles.sheildBtn}>
+                <View style={styles.sheild} />
+              </TouchableOpacity>
+            )}
+            {!offline ? (
+              <View style={[styles.offlineView]}>
                 <View style={styles.blackView}></View>
                 <View style={styles.row}>
-                  <Image
-                    source={images.filterIcon2}
-                    style={styles.filterIcon2}
-                  />
-                  <Text style={styles.offlineText}>You’re Offline</Text>
+                  <TouchableOpacity onPress={() => showOffline(!offline)}>
+                    <Image
+                      source={images.filterIcon2}
+                      style={styles.filterIcon2}
+                    />
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={{left: sizes.screenWidth * 0.3}}
+                    onPress={() => setShowRecommended(!showRecommended)}>
+                    <Text style={styles.offlineText}>You’re {userStatus}</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+            ) : (
+              <View style={[styles.offlineView2]}>
+                <View style={styles.blackView}></View>
+                <View style={styles.row}>
+                  <TouchableOpacity onPress={() => showOffline(!offline)}>
+                    <Image
+                      source={images.filterIcon2}
+                      style={styles.filterIcon2}
+                    />
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={{left: sizes.screenWidth * 0.3}}
+                    onPress={() => setShowRecommended(!showRecommended)}>
+                    <Text style={styles.offlineText}>You’re {userStatus}</Text>
+                  </TouchableOpacity>
                 </View>
                 <View style={[styles.row, {left: sizes.screenWidth * 0.02}]}>
                   <View style={{marginRight: sizes.screenWidth * 0.1}}>
@@ -210,7 +228,89 @@ export default function Home() {
                     <Text style={styles.grayText}>Cancellation</Text>
                   </View>
                 </View>
-              </TouchableOpacity>
+              </View>
+            )}
+
+            {showRecommended && (
+              <View style={[styles.recommendedView]}>
+                <View style={styles.blackView}></View>
+                <Text style={styles.heading}>Recomended for you</Text>
+                <TouchableOpacity style={styles.modalRow}>
+                  <Image source={images.graph} style={styles.imgSty} />
+                  <Text style={styles.heading2}>View Earnings Trends</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.modalRow}>
+                  <Image source={images.star} style={styles.imgSty} />
+                  <Text style={styles.heading2}>
+                    View available Product request
+                  </Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.modalRow}>
+                  <Image source={images.steering} style={styles.imgSty} />
+                  <Text style={styles.heading2}>See completed request</Text>
+                </TouchableOpacity>
+                {/* <View> */}
+                <View style={styles.bottomBtn}>
+                  <TouchableOpacity
+                    style={{
+                      left: sizes.screenWidth * 0.05,
+                      top: sizes.screenHeight * 0.01,
+                    }}>
+                    <Image
+                      source={images.filterIcon2}
+                      style={{
+                        height: sizes.screenHeight * 0.03,
+                        width: sizes.screenHeight * 0.03,
+                      }}
+                    />
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={{
+                      left: sizes.screenWidth * 0.05,
+                      // top: sizes.screenHeight * 0.01,
+                    }}
+                    onPress={() => {
+                      if (userStatus == 'Online') {
+                        setUserStatus('Offline');
+                        setShowRecommended(false);
+                      } else {
+                        setUserStatus('Online');
+                        setShowRecommended(false);
+
+                      }
+                    }}>
+                    <Image
+                      source={images.palm}
+                      style={{
+                        height: sizes.screenHeight * 0.05,
+                        width: sizes.screenHeight * 0.05,
+                      }}
+                    />
+                    <Text
+                      style={{
+                        color: colors.black,
+                        right: sizes.screenWidth * 0.03,
+                      }}>
+                      Go {userStatus == 'Online' ? 'Offline' : 'Online'}
+                    </Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={
+                      {
+                        // left: sizes.screenWidth * 0.05,
+                        // top: sizes.screenHeight * 0.01,
+                      }
+                    }>
+                    <Image
+                      source={images.searchBtn}
+                      style={{
+                        height: sizes.screenHeight * 0.06,
+                        width: sizes.screenHeight * 0.06,
+                      }}
+                    />
+                  </TouchableOpacity>
+                </View>
+              </View>
             )}
           </View>
         </View>

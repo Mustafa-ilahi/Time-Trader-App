@@ -66,7 +66,7 @@ export const styles = StyleSheet.create({
     color: colors.black,
     fontSize: fontSize.h6,
     fontWeight: '600',
-    left: sizes.screenHeight * 0.12,
+    // left: sizes.screenHeight * 0.12,
   },
   offlineView2: {
     bottom: sizes.screenHeight * 0.59,
@@ -93,11 +93,72 @@ export const styles = StyleSheet.create({
     borderRadius: sizes.screenWidth * 0.5,
     left: sizes.screenWidth * 0.2,
   },
-  headerView2:{
+  headerView2: {
     backgroundColor: '#2B2B2B',
     padding: sizes.screenWidth * 0.02,
     borderRadius: sizes.screenWidth * 0.5,
     left: sizes.screenWidth * 0.3,
-    bottom:sizes.screenHeight*0.1,
+    bottom: sizes.screenHeight * 0.1,
+  },
+  recommendedView: {
+    bottom: sizes.screenHeight / 0.78,
+    backgroundColor: colors.white,
+    height: sizes.screenHeight,
+    borderTopRightRadius: sizes.screenWidth * 0.1,
+    borderTopLeftRadius: sizes.screenWidth * 0.1,
+  },
+  heading: {
+    alignSelf: 'center',
+    alignItems: 'center',
+    fontSize: fontSize.medium,
+    color: colors.black,
+    fontWeight: '500',
+    marginBottom: sizes.screenHeight * 0.07,
+    // backgroundColor: 'yellow',
+  },
+  heading2: {
+    alignSelf: 'center',
+    alignItems: 'center',
+    fontSize: fontSize.smallM,
+    color: colors.black,
+    fontWeight: '500',
+  },
+  modalRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignSelf: 'center',
+    // justifyContent:'center',
+    // backgroundColor: 'red',
+    height: sizes.screenHeight * 0.04,
+    width: sizes.screenWidth * 0.7,
+    marginTop: sizes.screenHeight * 0.024,
+    // marginLeft:sizes.screenWidth * 0.2
+  },
+  imgSty: {
+    resizeMode: 'contain',
+    width: sizes.screenWidth * 0.04,
+    height: sizes.screenHeight * 0.025,
+    marginRight: sizes.screenWidth * 0.03,
+    // backgroundColor:'red'
+  },
+  bottomBtn: {
+    backgroundColor: colors.white,
+    padding: sizes.screenHeight * 0.02,
+    top: sizes.screenHeight * 0.26,
+    borderTopRightRadius: sizes.screenWidth * 0.05,
+    borderTopLeftRadius: sizes.screenWidth * 0.05,
+    height:sizes.screenHeight*0.1,
+    flexDirection:'row',
+    justifyContent:'space-between',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 1,
+      height: 1,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 0,
+    elevation: 10,
+    backgroundColor: colors.white,
+    color:colors.black
   },
 });

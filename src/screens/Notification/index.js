@@ -15,9 +15,7 @@ export default function Notification({navigation}) {
             <Image source={images.notiHeader} style={styles.headerImg} />
           </TouchableOpacity>
           <View style={styles.topMainView}>
-            <TouchableOpacity
-              style={styles.MainviewSty}
-              onPress={() => navigation.navigate('SettingNotification')}>
+            <TouchableOpacity style={styles.MainviewSty}>
               <Image source={images.notiTick} style={styles.ViewImg} />
               <View style={styles.TextviewSty}>
                 <Text style={styles.viewTextSty}>System</Text>
@@ -28,7 +26,7 @@ export default function Notification({navigation}) {
                 <Text style={styles.viewTextSty2}>suc...</Text>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.MainviewSty} onPress={() => navigation.navigate('SettingNotification')}>
+            <TouchableOpacity style={styles.MainviewSty}>
               <Image source={images.notiTicket} style={styles.ViewImg} />
               <View style={styles.TextviewSty}>
                 <Text style={styles.viewTextSty}>Promotion</Text>
@@ -37,7 +35,7 @@ export default function Notification({navigation}) {
                 </Text>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.MainviewSty} onPress={() => navigation.navigate('SettingNotification')}>
+            <TouchableOpacity style={styles.MainviewSty}>
               <Image source={images.notiTicket} style={styles.ViewImg} />
               <View style={styles.TextviewSty}>
                 <Text style={styles.viewTextSty}>Promotion</Text>
@@ -46,7 +44,7 @@ export default function Notification({navigation}) {
                 </Text>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.MainviewSty} onPress={() => navigation.navigate('SettingNotification')}>
+            <TouchableOpacity style={styles.MainviewSty}>
               <Image source={images.notiCross} style={styles.ViewImg} />
               <View style={styles.TextviewSty}>
                 <Text style={styles.viewTextSty}>System</Text>
@@ -57,7 +55,7 @@ export default function Notification({navigation}) {
                 <Text style={styles.viewTextSty2}>can...</Text>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.MainviewSty} onPress={() => navigation.navigate('SettingNotification')}>
+            <TouchableOpacity style={styles.MainviewSty}>
               <Image source={images.notiWallet} style={styles.ViewImg} />
               <View style={styles.TextviewSty}>
                 <Text style={styles.viewTextSty}>System</Text>
@@ -67,7 +65,7 @@ export default function Notification({navigation}) {
                 <Text style={styles.viewTextSty2}>com...</Text>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.MainviewSty} onPress={() => navigation.navigate('SettingNotification')}>
+            <TouchableOpacity style={styles.MainviewSty}>
               <Image source={images.notiTicket} style={styles.ViewImg} />
               <View style={styles.TextviewSty}>
                 <Text style={styles.viewTextSty}>Promotion</Text>

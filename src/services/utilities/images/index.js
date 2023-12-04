@@ -116,6 +116,11 @@ import website from '../../../assets/website.png';
 import whatsApp from '../../../assets/whatsApp.png';
 import support from '../../../assets/support.png';
 import twitter from '../../../assets/twitter.png';
+import star from '../../../assets/star.png';
+import graph from '../../../assets/graph.png';
+import steering from '../../../assets/steering.png';
+import searchBtn from '../../../assets/searchBtn.png';
+import palm from '../../../assets/palm.png';
 
 const images = {
   add,
@@ -127,7 +132,10 @@ const images = {
   contblue,
   contblue2,
   searchIcon2,
+  star,
+  graph,
   insta,
+  steering,
   facebook,
   website,
   whatsApp,
@@ -239,6 +247,8 @@ const images = {
   onBoarding,
   onBoarding2,
   onbordingBottom,
+  searchBtn,
+  palm
 };
 
 export default images;
