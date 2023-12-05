@@ -57,8 +57,6 @@ export default function MainNavigator() {
 const MyStack = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
-      <Stack.Screen name="ProductRequest" component={ProductRequest} />
-      <Stack.Screen name="Feedback" component={Feedback} />
       <Stack.Screen name="Onboarding" component={Onboarding} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="CreateAccount" component={CreateAccount} />
@@ -107,7 +105,8 @@ const MyStack = () => {
       <Stack.Screen name="ChatRequest" component={ChatRequest} />
       <Stack.Screen name="Settings" component={Settings} />
       <Stack.Screen name="HelpCenter" component={HelpCenter} />
-
+      <Stack.Screen name="ProductRequest" component={ProductRequest} />
+      <Stack.Screen name="Feedback" component={Feedback} />
     </Stack.Navigator>
   );
 };

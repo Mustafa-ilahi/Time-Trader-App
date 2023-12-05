@@ -132,6 +132,7 @@ export default function Home({navigation}) {
                   ♦ 0 points
                 </Text>
                 <TouchableOpacity
+                  onPress={() => setShowRecommended(!showRecommended)}
                   style={{
                     borderColor: colors.black,
                     borderWidth: 1,
@@ -161,7 +162,9 @@ export default function Home({navigation}) {
               <Image source={images.goBtn} style={styles.goBtn} />
             </TouchableOpacity>
             {userStatus === 'Online' ? (
-              <TouchableOpacity style={styles.sheildBtn}>
+              <TouchableOpacity
+                style={styles.sheildBtn}
+                onPress={() => navigation.navigate('ProductRequest')}>
                 <Image source={images.sheild} style={styles.sheild} />
               </TouchableOpacity>
             ) : (
