@@ -12,7 +12,7 @@ import {styles} from './style';
 import Header from '../../components/Header';
 import images from '../../services/utilities/images';
 
-export default function ChatRequest() {
+export default function ChatRequest({navigation}) {
   return (
     <SafeAreaView>
       <View style={styles.MainContainer}>
@@ -21,7 +21,7 @@ export default function ChatRequest() {
           <TouchableOpacity>
             <Image source={images.phoneImg} style={styles.imgSty} />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=>navigation.navigate('Feedback')}>
             <Image source={images.threeDot} style={styles.imgSty} />
           </TouchableOpacity>
         </View>

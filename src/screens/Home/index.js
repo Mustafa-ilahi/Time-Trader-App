@@ -276,7 +276,6 @@ export default function Home({navigation}) {
                       } else {
                         setUserStatus('Online');
                         setShowRecommended(false);
-
                       }
                     }}>
                     <Image

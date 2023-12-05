@@ -121,6 +121,19 @@ import graph from '../../../assets/graph.png';
 import steering from '../../../assets/steering.png';
 import searchBtn from '../../../assets/searchBtn.png';
 import palm from '../../../assets/palm.png';
+import icon from '../../../assets/icon.png';
+import iconTwo from '../../../assets/iconTwo.png';
+import length from '../../../assets/length.png';
+import ratingStar from '../../../assets/ratingStar.png';
+import girl from '../../../assets/girl.png';
+import verticalThreeDot from '../../../assets/verticalThreeDot.png';
+import mapbgImg from '../../../assets/mapbgImg.png';
+import btnTaB3 from '../../../assets/btnTaB3.png';
+import crossBtn from '../../../assets/crossBtn.png';
+import bgImgtwo from '../../../assets/bgImgtwo.png';
+import target from '../../../assets/target.png';
+import redBulb from '../../../assets/redBulb.png';
+import person from '../../../assets/person.png';
 
 const images = {
   add,
@@ -132,11 +145,24 @@ const images = {
   contblue,
   contblue2,
   searchIcon2,
+  crossBtn,
+  redBulb,
+  bgImgtwo,
+  target,
+  person,
+  mapbgImg,
+  btnTaB3,
   star,
   graph,
+  girl,
   insta,
   steering,
   facebook,
+  icon,
+  iconTwo,
+  ratingStar,
+  length,
+  verticalThreeDot,
   website,
   whatsApp,
   support,

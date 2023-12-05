@@ -40,6 +40,8 @@ import CreateNewPin from '../../screens/CreateNewPin';
 import SetFingerprint from '../../screens/SetFingerprint';
 import Onboarding from '../../screens/Onboarding';
 import HelpCenter from '../../screens/HelpCenter';
+import ProductRequest from '../../screens/ProductRequest';
+import Feedback from '../../screens/Feedback';
 
 const Stack = createStackNavigator();
 export default function MainNavigator() {
@@ -55,6 +57,8 @@ export default function MainNavigator() {
 const MyStack = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name="ProductRequest" component={ProductRequest} />
+      <Stack.Screen name="Feedback" component={Feedback} />
       <Stack.Screen name="Onboarding" component={Onboarding} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="CreateAccount" component={CreateAccount} />
