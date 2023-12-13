@@ -11,6 +11,7 @@ import React from 'react';
 import {styles} from './style';
 import Header from '../../components/Header';
 import images from '../../services/utilities/images';
+import {sizes} from '../../services';
 
 export default function ChatRequest({navigation}) {
   return (
@@ -21,7 +22,7 @@ export default function ChatRequest({navigation}) {
           <TouchableOpacity>
             <Image source={images.phoneImg} style={styles.imgSty} />
           </TouchableOpacity>
-          <TouchableOpacity onPress={()=>navigation.navigate('Feedback')}>
+          <TouchableOpacity onPress={() => navigation.navigate('Feedback')}>
             <Image source={images.threeDot} style={styles.imgSty} />
           </TouchableOpacity>
         </View>
@@ -66,7 +67,7 @@ export default function ChatRequest({navigation}) {
             <TouchableOpacity>
               <Image source={images.clip} style={styles.clipImg} />
             </TouchableOpacity>
-            <View></View>
+            <TextInput placeholder="Message" style={styles.input} />
             <TouchableOpacity>
               <Image source={images.mic} style={styles.clipImg} />
             </TouchableOpacity>

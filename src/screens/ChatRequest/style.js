@@ -127,9 +127,26 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    marginTop: sizes.screenHeight * 0.01,
+    paddingBottom: sizes.screenHeight * 0.005,
   },
   clipImg: {
-    height: sizes.screenHeight * 0.066,
-    width: sizes.screenWidth * 0.13,
+    height: sizes.screenHeight * 0.059,
+    width: sizes.screenWidth * 0.11,
+  },
+  input: {
+    backgroundColor: 'white',
+    width: sizes.screenWidth * 0.62,
+    borderRadius: sizes.screenWidth * 0.06,
+    paddingLeft: sizes.screenWidth * 0.05,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+
+    elevation: 3,
   },
 });

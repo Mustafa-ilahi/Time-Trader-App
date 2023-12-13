@@ -114,7 +114,9 @@ export default function ProductRequest({navigation}) {
                   <Text style={styles.btnTextSty}>Accept</Text>
                 </TouchableOpacity>
               </View>
-              <TouchableOpacity style={styles.crossbtnMainView2}>
+              <TouchableOpacity
+                style={styles.crossbtnMainView2}
+                onPress={() => setTabName(false)}>
                 <Image source={images.crossBtn} style={styles.crossbtnView} />
               </TouchableOpacity>
             </View>
@@ -129,7 +131,12 @@ export default function ProductRequest({navigation}) {
             <View style={styles.recommendedView2}>
               <View style={styles.blackView}></View>
               <View style={styles.modalRow}>
-                <TouchableOpacity style={styles.crossbtnMainView}>
+                <TouchableOpacity
+                  style={styles.crossbtnMainView}
+                  onPress={() => {
+                    setTabName(true);
+                    setAcceptModal(false);
+                  }}>
                   <Image source={images.crossBtn} style={styles.crossbtnView} />
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.modalRowViewImg}>
