@@ -170,4 +170,62 @@ export const styles = StyleSheet.create({
     width: sizes.screenHeight * 0.012,
     marginLeft: sizes.screenWidth * 0.01,
   },
+
+  heading: {
+    color: colors.black,
+    fontSize: fontSize.h5,
+    fontWeight: '600',
+  },
+  slider: {
+    width: sizes.screenWidth * 0.88,
+    height: sizes.screenWidth * 0.1,
+  
+  },
+
+  sliderInputField: {
+    marginLeft:sizes.screenWidth * 0.02,
+    // backgroundColor:'red',
+    width:sizes.screenWidth * 0.5,
+    color:colors.black
+  },
+  textSlider: {
+    color: colors.white,
+    backgroundColor: colors.disabledBg3,
+    position: 'absolute',
+    right: 0,
+    width:sizes.screenWidth * 0.18,
+    height:sizes.screenHeight * 0.035,
+    textAlign:'center',
+    textAlignVertical:'center',
+    borderRadius:sizes.screenWidth * 0.04,
+    fontWeight:'600'
+  },
+  textSliderView: {
+    position: 'absolute',
+    right: sizes.screenWidth * 0.02,
+    top:sizes.screenHeight * 0.015,
+    alignItems:'center'
+  },
+  logoStyle: {
+    resizeMode: 'contain',
+    width: sizes.screenWidth * 0.07,
+    height: sizes.screenWidth * 0.07,
+  },
+  sliderView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: sizes.screenWidth * 0.87,
+    height: sizes.screenHeight * 0.07,
+    borderWidth:1,
+    paddingHorizontal:sizes.screenWidth * 0.02,
+    backgroundColor:colors.white
+  },
+  horizontal:{
+    width:sizes.screenWidth * 0.67,
+    height:sizes.screenHeight * 0.001,
+    backgroundColor:colors.disabledBg3,
+    position:'absolute',
+    top:sizes.screenHeight * 0.489,
+    marginLeft:sizes.screenWidth * 0.02
+  },
 });

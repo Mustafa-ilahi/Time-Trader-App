@@ -134,11 +134,14 @@ import bgImgtwo from '../../../assets/bgImgtwo.png';
 import target from '../../../assets/target.png';
 import redBulb from '../../../assets/redBulb.png';
 import person from '../../../assets/person.png';
+import congrats from '../../../assets/congrats.png';
+import rLogo from '../../../assets/rLogo.png';
 
 const images = {
   add,
   backIcon,
   notiCross,
+  rLogo,
   notiHeader,
   contblack1,
   contblack2,
@@ -274,7 +277,8 @@ const images = {
   onBoarding2,
   onbordingBottom,
   searchBtn,
-  palm
+  palm,
+  congrats,
 };
 
 export default images;

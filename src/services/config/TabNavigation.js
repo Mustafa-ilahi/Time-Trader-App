@@ -64,7 +64,7 @@ export default function TabNavigation() {
             />
           ),
           tabBarLabel: ({focused}) => (
-            <CustomTabLabel focused={focused} label="Bookings" />
+            <CustomTabLabel focused={focused} label="Request" />
           ),
         }}
       />

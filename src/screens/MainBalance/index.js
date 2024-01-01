@@ -9,14 +9,40 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import Header from '../../components/Header';
 import {styles} from './style';
 import {colors, sizes} from '../../services';
 import images from '../../services/utilities/images';
 import Button from '../../components/Button';
+import Slider from 'react-native-slider';
 
 export default function MainBalance({navigation}) {
+  const [sliderValue, setSliderValue] = useState(0);
+  const [selectedChoice, setSelectedChoice] = useState('');
+
+  const choices = [
+    {value: 0, label: 'Choice 1', price: 'R1000'},
+    {value: 1, label: 'Choice 2', price: 'R2000'},
+    {value: 2, label: 'Choice 3', price: 'R3000'},
+    {value: 3, label: 'Choice 4', price: 'R4000'},
+    {value: 4, label: 'Choice 5', price: 'R5000'},
+    {value: 5, label: 'Choice 6', price: 'R6000'},
+  ];
+
+  const [inputValue, setInputValue] = useState();
+
+  const onSliderValueChange = value => {
+    setSliderValue(value);
+    setInputValue(value.toFixed(2));
+  };
+
+  const onInputChange = text => {
+    const numericValue = parseFloat(text);
+    setSliderValue(isNaN(numericValue) ? 0 : numericValue);
+    setInputValue(text);
+  };
+
   return (
     <SafeAreaView>
       <ImageBackground source={images.mainBgg} style={styles.container}>
@@ -43,14 +69,41 @@ export default function MainBalance({navigation}) {
               style={styles.topUpSeparator}
               source={images.SeparatorVerticall}
             />
-            <TouchableOpacity style={styles.topUpContainer} onPress={() => navigation.navigate('WithdrawToBankAccount')}>
+            <TouchableOpacity
+              style={styles.topUpContainer}
+              onPress={() => navigation.navigate('WithdrawToBankAccount')}>
               <Image style={styles.topUpIcon} source={images.downloadLine} />
               <Text style={styles.topUpText}>Withdraw</Text>
             </TouchableOpacity>
           </View>
-
+          <Text style={styles.heading}>SET TODAY TRADING LIMIT</Text>
+          <Slider
+            style={styles.slider}
+            minimumValue={0}
+            maximumValue={6}
+            step={1}
+            value={sliderValue}
+            onValueChange={onSliderValueChange}
+            // minimumTrackTintColor="red"
+            maximumTrackTintColor="black"
+            thumbTintColor="black"
+          />
+          <View style={styles.sliderView}>
+            <Image source={images.rLogo} style={styles.logoStyle} />
+            <TextInput
+              style={styles.sliderInputField}
+              value={inputValue}
+              onChangeText={onInputChange}
+              keyboardType="numeric"
+              placeholder="Mins R1000"
+              // editable='false'
+            />
+            <TouchableOpacity style={styles.textSliderView}>
+              <Text style={styles.textSlider}>Set</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.horizontal}></View>
           <Text style={styles.blackTextBold}>Recent Withdrawal</Text>
-
           <View style={styles.scrollViewContainer}>
             <ScrollView
               horizontal={true}
@@ -80,7 +133,8 @@ export default function MainBalance({navigation}) {
 
           <View style={styles.row}>
             <Text style={styles.blackTextBold}>Latest Transactions</Text>
-            <TouchableOpacity onPress={() => navigation.navigate('TransactionHistory')}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('TransactionHistory')}>
               <Text style={styles.disabledText}>View all</Text>
             </TouchableOpacity>
           </View>

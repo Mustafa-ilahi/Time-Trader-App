@@ -10,12 +10,15 @@ import React, {useState} from 'react';
 import {styles} from './style';
 import Header from '../../components/Header';
 import images from '../../services/utilities/images';
-import {sizes} from '../../services';
+import {colors, sizes} from '../../services';
+import Modal from 'react-native-modal';
 
 export default function ProductRequest({navigation}) {
   const [tabName, setTabName] = useState(false);
   const [hideContact, setHideContact] = useState(false);
   const [acceptModal, setAcceptModal] = useState(false);
+  const [cancelRide, setCancelRide] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(false)
 
   return (
     <SafeAreaView>
@@ -129,7 +132,12 @@ export default function ProductRequest({navigation}) {
             <View style={styles.recommendedView2}>
               <View style={styles.blackView}></View>
               <View style={styles.modalRow}>
-                <TouchableOpacity style={styles.crossbtnMainView}>
+                <TouchableOpacity
+                  style={styles.crossbtnMainView}
+                  onPress={() => {
+                    setAcceptModal(false);
+                    setCancelRide(!cancelRide);
+                  }}>
                   <Image source={images.crossBtn} style={styles.crossbtnView} />
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.modalRowViewImg}>
@@ -158,7 +166,50 @@ export default function ProductRequest({navigation}) {
             </View>
           </View>
         )}
+        {cancelRide && (
+          <View style={{backgroundColor: 'red', height: sizes.screenHeight}}>
+            <ImageBackground
+              source={images.mapbgImg}
+              style={styles.bgImg}></ImageBackground>
+            <View style={styles.recommendedView3}>
+              <View style={{alignSelf: 'center', alignItems: 'center'}}>
+                <View style={styles.blackView}></View>
+                <TouchableOpacity style={styles.crossbtnMainView3}>
+                  <Image source={images.crossBtn} style={styles.crossbtnView} />
+                </TouchableOpacity>
+                <View
+                  style={{
+                    marginTop: sizes.screenHeight * 0.02,
+                    alignItems: 'center',
+                  }}>
+                  <Text style={styles.textModal}>Going back will cancel</Text>
+                  <Text style={styles.textModal}>this Request </Text>
+                </View>
+                <Text style={styles.textModal2}>
+                  Do you want to Decline this Request
+                </Text>
+                <TouchableOpacity style={styles.btnSty2} onPress={() => setCancelRide(false)}>
+                  <Text style={styles.btnTextSty2}>Cancel</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.btnSty3} onPress={() => setIsModalVisible(!isModalVisible)}>
+                  <Text style={styles.btnTextSty}>Continue</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          </View>
+        )}
       </View>
+      <Modal isVisible={isModalVisible} onBackdropPress={() => setIsModalVisible(!isModalVisible)}>
+        <View style={styles.modalCOntinue}>
+          <View style={{alignItems:'center'}}>
+            <Image source={images.congrats} style={styles.congratsSiz}/>
+            <Text style={styles.modalText}>oops</Text>
+            <Text style={styles.modalText2}>The product request by Buyer has</Text>
+            <Text style={styles.modalText2}>been declined by you</Text>
+            <Image source={images.loading} style={styles.congratsSiz2}/>
+          </View>
+        </View>
+      </Modal>
     </SafeAreaView>
   );
 }

@@ -31,6 +31,7 @@ export const styles = StyleSheet.create({
   },
   mapView: {
     width: sizes.screenWidth * 0.85,
+    height: sizes.screenHeight * 0.28,
     alignSelf: 'center',
     marginTop: sizes.screenHeight * 0.02,
     flexDirection: 'column',
@@ -107,6 +108,12 @@ export const styles = StyleSheet.create({
     color: colors.black,
     fontSize: fontSize.smallM,
     fontWeight: '500',
+  },
+  locationText2: {
+    color: colors.black,
+    fontSize: fontSize.smallM,
+    fontWeight: '500',
+    marginTop:sizes.screenHeight * 0.04
   },
   timeText: {
     color: colors.disabledBg2,

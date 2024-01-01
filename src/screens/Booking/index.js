@@ -12,7 +12,7 @@ import Heading from '../../components/Heading';
 import images from '../../services/utilities/images';
 
 export default function Booking() {
-  const [tabname, setTabname] = useState('Pending');
+  const [tabname, setTabname] = useState('Ongoing');
   const [pendingData, setPendingData] = useState([
     {
       day: 'Mon 12 Dec 2022',
@@ -148,7 +148,7 @@ export default function Booking() {
     <SafeAreaView>
       <View style={styles.container}>
         <Heading
-          title={'Booking'}
+          title={'Request'}
           showImg={true}
           ImgSource={images.searchIconn}
         />
@@ -156,13 +156,13 @@ export default function Booking() {
           <TouchableOpacity
             style={styles.tabBtn}
             onPress={() => {
-              handleTabname('Pending');
+              handleTabname('Ongoing');
             }}>
             <Text
               style={
-                tabname === 'Pending' ? styles.btnTextActive : styles.btnText
+                tabname === 'Ongoing' ? styles.btnTextActive : styles.btnText
               }>
-              Pending
+              Ongoing
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
@@ -190,7 +190,7 @@ export default function Booking() {
             </Text>
           </TouchableOpacity>
         </View>
-        {tabname === 'Pending' && (
+        {tabname === 'Ongoing' && (
           <ScrollView>
             <View>
               {pendingData.map((item, index) => {
@@ -265,9 +265,12 @@ export default function Booking() {
                             </Text>
                             <Text style={styles.timeText}>{item.time1}</Text>
                           </View>
-                          <Text style={styles.locationText}>
+                          <View>
+                          <Text style={styles.locationText2}>
                             {item.location2}
                           </Text>
+                          <Text style={styles.timeText}>{item.time2}</Text>
+                          </View>
                         </View>
                       </View>
 

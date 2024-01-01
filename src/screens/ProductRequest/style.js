@@ -153,6 +153,13 @@ recommendedView: {
     borderTopRightRadius: sizes.screenWidth * 0.1,
     borderTopLeftRadius: sizes.screenWidth * 0.1,
   },
+  recommendedView3: {
+    bottom: sizes.screenHeight / 0.93,
+    backgroundColor: colors.white,
+    height: sizes.screenHeight,
+    borderTopRightRadius: sizes.screenWidth * 0.1,
+    borderTopLeftRadius: sizes.screenWidth * 0.1,
+  },
   blackView: {
     borderWidth: 3,
     borderRadius: sizes.screenWidth * 0.02,
@@ -172,8 +179,34 @@ recommendedView: {
     justifyContent:'center',
     borderRadius:sizes.screenWidth * 0.3
   },
+  btnSty3:{
+    // alignSelf:'center',
+    marginTop:sizes.screenHeight * 0.02,
+    borderWidth:1,
+    backgroundColor:colors.black,
+    alignItems:'center',
+    width:sizes.screenWidth * 0.5,
+    height:sizes.screenHeight * 0.045,
+    justifyContent:'center',
+    borderRadius:sizes.screenWidth * 0.3
+  },
+  btnSty2:{
+    // alignSelf:'center',
+    // marginTop:sizes.screenHeight * 0.05,
+    borderWidth:1,
+    backgroundColor:colors.white,
+    alignItems:'center',
+    width:sizes.screenWidth * 0.5,
+    height:sizes.screenHeight * 0.045,
+    justifyContent:'center',
+    borderRadius:sizes.screenWidth * 0.3
+  },
   btnTextSty:{
     color:colors.white,
+    fontSize:fontSize.medium
+  },
+  btnTextSty2:{
+    color:colors.black,
     fontSize:fontSize.medium
   },
   modalView:{
@@ -237,9 +270,59 @@ crossbtnMainView:{
   bottom:sizes.screenHeight * 0.59,
   right:sizes.screenHeight * 0.04,
 },
+crossbtnMainView3:{
+  position:'absolute',
+  bottom:sizes.screenHeight * 0.77,
+  left:sizes.screenHeight * 0.3,
+},
 crossbtnMainView2:{
   position:'absolute',
   bottom:sizes.screenHeight * 1.25,
   right:sizes.screenHeight * 0.04,
+},
+cancelRideMainView:{
+  width:sizes.screenWidth * 0.7,
+  height:sizes.screenHeight * 0.4,
+  backgroundColor:colors.red,
+  alignSelf:'center'
+},
+textModal:{
+  color:colors.black,
+  fontSize:fontSize.large,
+  fontWeight:'600'
+},
+textModal2:{
+  color:colors.disabledBg2,
+  marginTop:sizes.screenHeight * 0.02,
+  marginBottom:sizes.screenHeight * 0.03,
+},
+modalCOntinue:{
+  width:sizes.screenWidth * 0.8,
+  height:sizes.screenHeight * 0.55,
+  backgroundColor:colors.white,
+  alignSelf:'center',
+  borderRadius:sizes.screenWidth * 0.03,
+},
+congratsSiz:{
+  resizeMode:'contain',
+  width:sizes.screenWidth * 0.45,
+  height:sizes.screenWidth * 0.45,
+  marginTop:sizes.screenHeight * 0.06,
+},
+congratsSiz2:{
+  resizeMode:'contain',
+  width:sizes.screenWidth * 0.1,
+  height:sizes.screenWidth * 0.1,
+  marginTop:sizes.screenHeight * 0.05
+},
+modalText:{
+  color:colors.black,
+  fontSize:fontSize.h4,
+  fontWeight:'700',
+  marginBottom:sizes.screenHeight * 0.02
+},
+modalText2:{
+  color:colors.black,
+  fontSize:fontSize.smallM
 },
 });
