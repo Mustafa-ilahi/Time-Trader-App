@@ -34,7 +34,6 @@ export default function MainBalance({navigation}) {
 
   const onSliderValueChange = value => {
     setSliderValue(value);
-    setInputValue(value.toFixed(2));
   };
 
   const onInputChange = text => {
