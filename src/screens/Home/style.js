@@ -97,7 +97,7 @@ export const styles = StyleSheet.create({
     backgroundColor: '#2B2B2B',
     padding: sizes.screenWidth * 0.02,
     borderRadius: sizes.screenWidth * 0.5,
-    left: sizes.screenWidth * 0.3,
+    left: sizes.screenWidth * 0.34,
     bottom: sizes.screenHeight * 0.1,
   },
   recommendedView: {
