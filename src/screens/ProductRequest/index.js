@@ -117,7 +117,9 @@ export default function ProductRequest({navigation}) {
                   <Text style={styles.btnTextSty}>Accept</Text>
                 </TouchableOpacity>
               </View>
-              <TouchableOpacity style={styles.crossbtnMainView2}>
+              <TouchableOpacity
+                style={styles.crossbtnMainView2}
+                onPress={() => setTabName(false)}>
                 <Image source={images.crossBtn} style={styles.crossbtnView} />
               </TouchableOpacity>
             </View>

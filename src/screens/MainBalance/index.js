@@ -22,18 +22,20 @@ export default function MainBalance({navigation}) {
   const [selectedChoice, setSelectedChoice] = useState('');
 
   const choices = [
-    {value: 0, label: 'Choice 1', price: 'R1000'},
-    {value: 1, label: 'Choice 2', price: 'R2000'},
-    {value: 2, label: 'Choice 3', price: 'R3000'},
-    {value: 3, label: 'Choice 4', price: 'R4000'},
-    {value: 4, label: 'Choice 5', price: 'R5000'},
-    {value: 5, label: 'Choice 6', price: 'R6000'},
+    {value: 1000, label: 'Choice 1', price: 'R1000'},
+    {value: 2000, label: 'Choice 2', price: 'R2000'},
+    {value: 3000, label: 'Choice 3', price: 'R3000'},
+    {value: 4000, label: 'Choice 4', price: 'R4000'},
+    {value: 5000, label: 'Choice 5', price: 'R5000'},
+    {value: 6000, label: 'Choice 6', price: 'R6000'},
   ];
 
   const [inputValue, setInputValue] = useState();
 
   const onSliderValueChange = value => {
     setSliderValue(value);
+
+    setInputValue(value.toFixed(2));
   };
 
   const onInputChange = text => {
