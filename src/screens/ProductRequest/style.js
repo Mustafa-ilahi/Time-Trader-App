@@ -171,10 +171,21 @@ recommendedView: {
   btnSty:{
     alignSelf:'center',
     marginTop:sizes.screenHeight * 0.05,
-    borderWidth:1,
+    // borderWidth:1,
     backgroundColor:colors.black,
     alignItems:'center',
-    width:sizes.screenWidth * 0.5,
+    width:sizes.screenWidth * 0.4,
+    height:sizes.screenHeight * 0.046,
+    justifyContent:'center',
+    borderRadius:sizes.screenWidth * 0.3
+  },
+  btnStySecond:{
+    alignSelf:'center',
+    marginTop:sizes.screenHeight * 0.05,
+    borderWidth:1,
+    backgroundColor:colors.white,
+    alignItems:'center',
+    width:sizes.screenWidth * 0.4,
     height:sizes.screenHeight * 0.045,
     justifyContent:'center',
     borderRadius:sizes.screenWidth * 0.3
@@ -203,11 +214,11 @@ recommendedView: {
   },
   btnTextSty:{
     color:colors.white,
-    fontSize:fontSize.medium
+    fontSize:fontSize.medium,
   },
   btnTextSty2:{
     color:colors.black,
-    fontSize:fontSize.medium
+    fontSize:fontSize.medium,
   },
   modalView:{
     padding:sizes.screenWidth * 0.02

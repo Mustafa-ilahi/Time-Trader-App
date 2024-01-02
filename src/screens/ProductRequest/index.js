@@ -18,7 +18,7 @@ export default function ProductRequest({navigation}) {
   const [hideContact, setHideContact] = useState(false);
   const [acceptModal, setAcceptModal] = useState(false);
   const [cancelRide, setCancelRide] = useState(false);
-  const [isModalVisible, setIsModalVisible] = useState(false)
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   return (
     <SafeAreaView>
@@ -108,14 +108,27 @@ export default function ProductRequest({navigation}) {
                     </Text>
                   </View>
                 </View>
-                <TouchableOpacity
-                  style={styles.btnSty}
-                  onPress={() => {
-                    setAcceptModal(true);
-                    setTabName(!tabName);
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    paddingHorizontal: sizes.screenWidth * 0.04,
                   }}>
-                  <Text style={styles.btnTextSty}>Accept</Text>
-                </TouchableOpacity>
+                  <TouchableOpacity
+                    style={styles.btnSty}
+                    onPress={() => {
+                      setAcceptModal(true);
+                      setTabName(!tabName);
+                    }}>
+                    <Text style={styles.btnTextSty}>Accept</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={styles.btnStySecond}
+                    onPress={() => navigation.navigate('MyTabs')}>
+                    <Text style={styles.btnTextSty2}>Decline</Text>
+                  </TouchableOpacity>
+                </View>
               </View>
               <TouchableOpacity
                 style={styles.crossbtnMainView2}
@@ -190,10 +203,14 @@ export default function ProductRequest({navigation}) {
                 <Text style={styles.textModal2}>
                   Do you want to Decline this Request
                 </Text>
-                <TouchableOpacity style={styles.btnSty2} onPress={() => setCancelRide(false)}>
+                <TouchableOpacity
+                  style={styles.btnSty2}
+                  onPress={() => setCancelRide(false)}>
                   <Text style={styles.btnTextSty2}>Cancel</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.btnSty3} onPress={() => setIsModalVisible(!isModalVisible)}>
+                <TouchableOpacity
+                  style={styles.btnSty3}
+                  onPress={() => setIsModalVisible(!isModalVisible)}>
                   <Text style={styles.btnTextSty}>Continue</Text>
                 </TouchableOpacity>
               </View>
@@ -201,14 +218,18 @@ export default function ProductRequest({navigation}) {
           </View>
         )}
       </View>
-      <Modal isVisible={isModalVisible} onBackdropPress={() => setIsModalVisible(!isModalVisible)}>
+      <Modal
+        isVisible={isModalVisible}
+        onBackdropPress={() => setIsModalVisible(!isModalVisible)}>
         <View style={styles.modalCOntinue}>
-          <View style={{alignItems:'center'}}>
-            <Image source={images.congrats} style={styles.congratsSiz}/>
+          <View style={{alignItems: 'center'}}>
+            <Image source={images.congrats} style={styles.congratsSiz} />
             <Text style={styles.modalText}>oops</Text>
-            <Text style={styles.modalText2}>The product request by Buyer has</Text>
+            <Text style={styles.modalText2}>
+              The product request by Buyer has
+            </Text>
             <Text style={styles.modalText2}>been declined by you</Text>
-            <Image source={images.loading} style={styles.congratsSiz2}/>
+            <Image source={images.loading} style={styles.congratsSiz2} />
           </View>
         </View>
       </Modal>

@@ -56,7 +56,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignSelf: 'center',
     marginTop: sizes.screenHeight * 0.03,
-    marginBottom: sizes.screenHeight * 0.07,
+    marginBottom: sizes.screenHeight * 0.05,
   },
 
   topUpContainer: {
@@ -84,6 +84,7 @@ export const styles = StyleSheet.create({
     fontSize: fontSize.smallM,
     fontWeight: '600',
     color: colors.black,
+    marginTop:sizes.screenHeight * 0.01
   },
 
   scrollViewContainer: {
@@ -177,34 +178,44 @@ export const styles = StyleSheet.create({
     fontWeight: '600',
   },
   slider: {
-    width: sizes.screenWidth * 0.88,
+    // backgroundColor:'red',
+    // alignSelf:'center',
     height: sizes.screenWidth * 0.1,
-  
+    width: sizes.screenWidth * 0.87,
+    alignItems: 'center',
+    // marginLeft:sizes.screenWidth * 0.02
   },
 
   sliderInputField: {
-    marginLeft:sizes.screenWidth * 0.02,
+    marginLeft: sizes.screenWidth * 0.02,
     // backgroundColor:'red',
-    width:sizes.screenWidth * 0.5,
-    color:colors.black
+    width: sizes.screenWidth * 0.5,
+    color: colors.black,
   },
+
+
+  linearGradient:{
+    marginVertical: sizes.screenHeight*0.02,
+    borderRadius: sizes.screenHeight*0.03
+  },
+
   textSlider: {
     color: colors.white,
     backgroundColor: colors.disabledBg3,
     position: 'absolute',
     right: 0,
-    width:sizes.screenWidth * 0.18,
-    height:sizes.screenHeight * 0.035,
-    textAlign:'center',
-    textAlignVertical:'center',
-    borderRadius:sizes.screenWidth * 0.04,
-    fontWeight:'600'
+    width: sizes.screenWidth * 0.18,
+    height: sizes.screenHeight * 0.035,
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    borderRadius: sizes.screenWidth * 0.04,
+    fontWeight: '600',
   },
   textSliderView: {
     position: 'absolute',
     right: sizes.screenWidth * 0.02,
-    top:sizes.screenHeight * 0.015,
-    alignItems:'center'
+    top: sizes.screenHeight * 0.015,
+    alignItems: 'center',
   },
   logoStyle: {
     resizeMode: 'contain',
@@ -216,16 +227,36 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     width: sizes.screenWidth * 0.87,
     height: sizes.screenHeight * 0.07,
-    borderWidth:1,
-    paddingHorizontal:sizes.screenWidth * 0.02,
-    backgroundColor:colors.white
+    // borderWidth:1,
+    paddingHorizontal: sizes.screenWidth * 0.02,
+    backgroundColor: colors.white,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+    borderRadius: sizes.screenWidth * 0.02,
   },
-  horizontal:{
-    width:sizes.screenWidth * 0.67,
-    height:sizes.screenHeight * 0.001,
-    backgroundColor:colors.disabledBg3,
-    position:'absolute',
-    top:sizes.screenHeight * 0.489,
-    marginLeft:sizes.screenWidth * 0.02
+  horizontal: {
+    width: sizes.screenWidth * 0.64,
+    height: sizes.screenHeight * 0.001,
+    backgroundColor: colors.disabledBg3,
+    position: 'absolute',
+    top: sizes.screenHeight * 0.554,
+    marginLeft: sizes.screenWidth * 0.03,
+  },
+  PricesRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent:'space-between'
+  },
+  priceStyling: {
+    color: colors.black,
+    fontWeight:'bold',
+    marginBottom:sizes.screenHeight * 0.02
+    // backgroundColor: 'red',
   },
 });
