@@ -109,7 +109,7 @@ export default function Home({navigation}) {
                     fontWeight: '600',
                     marginTop: sizes.screenHeight * 0.12,
                     bottom: sizes.screenHeight * 0.035,
-                    left: sizes.screenWidth * 0.05,
+                    left: sizes.screenWidth * 0.1,
                   }}>
                   TODAY, 28 NOV ’23
                 </Text>
@@ -118,7 +118,7 @@ export default function Home({navigation}) {
                     color: colors.black,
                     fontSize: fontSize.medium,
                     bottom: sizes.screenHeight * 0.03,
-                    left: sizes.screenWidth * 0.03,
+                    left: sizes.screenWidth * 0.05,
                   }}>
                   08 dealCompleted
                 </Text>
@@ -140,7 +140,7 @@ export default function Home({navigation}) {
                     width: sizes.screenWidth * 0.7,
                     alignSelf: 'center',
                     borderRadius: sizes.screenWidth * 0.1,
-                    right: sizes.screenWidth * 0.1,
+                    right: sizes.screenWidth * 0.12,
                   }}>
                   <Text
                     style={{
