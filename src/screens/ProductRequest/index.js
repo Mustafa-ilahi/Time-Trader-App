@@ -125,7 +125,10 @@ export default function ProductRequest({navigation}) {
                   </TouchableOpacity>
                   <TouchableOpacity
                     style={styles.btnStySecond}
-                    onPress={() => navigation.navigate('MyTabs')}>
+                    onPress={() => {
+                      setTabName(false);
+                      setCancelRide(true);
+                    }}>
                     <Text style={styles.btnTextSty2}>Decline</Text>
                   </TouchableOpacity>
                 </View>

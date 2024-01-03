@@ -14,12 +14,14 @@ import {colors, fontSize, sizes} from '../../services';
 import images from '../../services/utilities/images';
 import Button from '../../components/Button';
 import MapView, {Marker} from 'react-native-maps';
+import Modal from 'react-native-modal';
 
 export default function Home({navigation}) {
   const [offline, showOffline] = useState(false);
   const [header, showHeader] = useState(false);
   const [userStatus, setUserStatus] = useState('Online');
   const [showRecommended, setShowRecommended] = useState(false);
+  const [isModalVisisble, setIsModalVisisble] = useState(true);
   return (
     <SafeAreaView>
       <View style={styles.container}>
@@ -118,9 +120,9 @@ export default function Home({navigation}) {
                     color: colors.black,
                     fontSize: fontSize.medium,
                     bottom: sizes.screenHeight * 0.03,
-                    left: sizes.screenWidth * 0.05,
+                    left: sizes.screenWidth * 0.058,
                   }}>
-                  08 dealCompleted
+                  08 deal Completed
                 </Text>
                 <Text
                   style={{
@@ -317,6 +319,26 @@ export default function Home({navigation}) {
           </View>
         </View>
       </View>
+      <Modal
+        isVisible={isModalVisisble}
+        onBackdropPress={() => setIsModalVisisble(!isModalVisisble)}>
+        <View style={styles.modalMainView}>
+          <View style={{alignItems: 'center'}}>
+            <Image source={images.locationImg} style={styles.modalImg} />
+            <Text style={styles.modalHeading}>Enable Location</Text>
+            <Text style={styles.modalPara}>
+              We need access to your location to
+            </Text>
+            <Text style={styles.modalPara}>be able to use this service.</Text>
+            <TouchableOpacity style={styles.btnSty} onPress={() => setIsModalVisisble(!isModalVisisble)}>
+              <Text style={styles.btnTextSty}>Enable Location</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.btnStySecond} onPress={() => setIsModalVisisble(!isModalVisisble)}>
+              <Text style={styles.btnTextSty2}>Not Now</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
     </SafeAreaView>
   );
 }

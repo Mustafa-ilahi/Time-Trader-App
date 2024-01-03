@@ -161,4 +161,58 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.white,
     color:colors.black
   },
+  modalMainView:{
+    width:sizes.screenWidth * 0.8,
+    height:sizes.screenHeight * 0.6,
+    alignSelf:'center',
+    backgroundColor:colors.white,
+    borderRadius:sizes.screenWidth * 0.04
+  },
+  modalImg:{
+    resizeMode:'contain',
+    width:sizes.screenWidth * 0.45,
+    height:sizes.screenWidth * 0.45,
+    marginTop:sizes.screenHeight * 0.04,
+  },
+  modalHeading:{
+    color:colors.black,
+    fontSize:fontSize.h5,
+    fontWeight:'700',
+    marginTop:sizes.screenHeight * 0.01,
+    marginBottom:sizes.screenHeight * 0.01,
+  },
+  modalPara:{ 
+    color:colors.disabledBg3,
+    fontSize:fontSize.smallM,
+  },
+  btnSty:{
+    alignSelf:'center',
+    marginTop:sizes.screenHeight * 0.05,
+    // borderWidth:1,
+    backgroundColor:colors.black,
+    alignItems:'center',
+    width:sizes.screenWidth * 0.6,
+    height:sizes.screenHeight * 0.06,
+    justifyContent:'center',
+    borderRadius:sizes.screenWidth * 0.3
+  },
+  btnTextSty:{
+    color:colors.white,
+    fontSize:fontSize.medium,
+  },
+  btnStySecond:{
+    alignSelf:'center',
+    marginTop:sizes.screenHeight * 0.01,
+    borderWidth:1,
+    backgroundColor:colors.white,
+    alignItems:'center',
+    width:sizes.screenWidth * 0.6,
+    height:sizes.screenHeight * 0.05,
+    justifyContent:'center',
+    borderRadius:sizes.screenWidth * 0.3
+  },
+  btnTextSty2:{
+    color:colors.black,
+    fontSize:fontSize.medium,
+  },
 });

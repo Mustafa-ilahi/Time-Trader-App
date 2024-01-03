@@ -136,6 +136,7 @@ import redBulb from '../../../assets/redBulb.png';
 import person from '../../../assets/person.png';
 import congrats from '../../../assets/congrats.png';
 import rLogo from '../../../assets/rLogo.png';
+import locationImg from '../../../assets/locationImg.png';
 
 const images = {
   add,
@@ -145,6 +146,7 @@ const images = {
   notiHeader,
   contblack1,
   contblack2,
+  locationImg,
   contblue,
   contblue2,
   searchIcon2,
